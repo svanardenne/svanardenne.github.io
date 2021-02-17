@@ -89,7 +89,7 @@ img {
   height: 100vh;
   background-image: linear-gradient(to bottom, rgba(34, 38, 41, 1),
   rgba(34, 38, 41, .85)),
-                    url("../img/van-at-night.jpeg"); //Taken by Paul Gifford; found on Wikimedia Commons under Creative Commons Attribution-Share Alike 3.0 Unported url (https://upload.wikimedia.org/wikipedia/commons/8/85/Robson_Street_at_night%2C_Vancouver%2C_BC%2C_Canada.JPG)
+                    url("../img/background/van-at-night.jpeg"); //Taken by Paul Gifford; found on Wikimedia Commons under Creative Commons Attribution-Share Alike 3.0 Unported url (https://upload.wikimedia.org/wikipedia/commons/8/85/Robson_Street_at_night%2C_Vancouver%2C_BC%2C_Canada.JPG)
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -146,4 +146,45 @@ img {
 }
 .bio-title {
   font-family: 'Libre Franklin', sans-serif;
+}
+
+/**************************
+******** Projects *********
+**************************/
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 15px;
+  max-width: 1200px;
+}
+.card-wrapper {
+  margin-bottom: 50px;
+  border-radius: 20px;
+  background: #e0e0e0;
+  box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+  img {
+    padding-top: 15px;
+  }
+}
+@media(min-width: 576px) {
+  .projects-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+  }
+}
+@media(min-width: 768px) {
+  .projects-wrapper {
+    margin: 50px auto;
+  }
+  .card-wrapper {
+    flex-basis: 300px;
+  }
+}
+@media(min-width: 928px) {
+  .card-wrapper {
+    flex-basis: 350px;
+  }
 }
