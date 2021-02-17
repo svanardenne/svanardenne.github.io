@@ -1,0 +1,78 @@
+/**************************
+****** Base Elements ******
+**************************/
+body {
+  background-color: #e0e0e0;
+  margin: 0;
+  font-size: 1.25em;
+}
+
+nav {
+  position: relative;
+  background-color: #1b242f;
+  border-bottom: 3px solid #04c2c9;
+  width: 100%;
+  height: 50px;
+}
+
+/**************************
+********* Navbar **********
+**************************/
+.link-wrapper {
+  background: #333;
+  position: absolute;
+  top: 53px;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+.link-wrapper a:first-child {
+  padding-top: 24px;
+}
+
+.nav-link {
+  color: #e0e0e0;
+  text-decoration: none;
+  display: block;
+  padding: 12px 20px;
+  text-transform: uppercase;
+}
+
+.visible {
+  height: 220px;
+}
+
+.nav-toggle {
+  color: #e0e0e0;
+  position: absolute;
+  right: 5vw;
+  margin-top: 5px;
+  font-size: 40px;
+}
+
+@media (min-width: 576px) {
+  .link-wrapper {
+    position: initial;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+    height: 50px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .link-wrapper a:first-child {
+    padding-top: 12px;
+  }
+
+  .nav-link {
+    display: inline;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */
