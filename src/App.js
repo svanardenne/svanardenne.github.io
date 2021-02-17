@@ -4,6 +4,7 @@ import './css/app.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
+import Contact from './components/Contact';
 
 // Import FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -20,6 +21,7 @@ function App() {
           <Redirect exact path="/" to="/home" />
           <Route path="/home" component={Home} />
           <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
         </Switch>
       </div>
     </BrowserRouter>
