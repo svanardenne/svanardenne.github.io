@@ -74,5 +74,23 @@ nav {
     display: none;
   }
 }
+/**************************
+********* Navbar **********
+**************************/
+.banner {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #282a36, rgba(68, 71, 90, 0.85)), url("../img/van-at-night.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-text {
+  color: #e0e0e0;
+}
 
 /*# sourceMappingURL=app.css.map */

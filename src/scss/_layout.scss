@@ -68,3 +68,23 @@ nav {
     display: none;
   }
 }
+
+/**************************
+********* Navbar **********
+**************************/
+.banner {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(40,42,54, 1),
+                  rgba(68,71,90, .85)),
+                    url("../img/van-at-night.jpeg"); //Taken by Paul Gifford; found on Wikimedia Commons under Creative Commons Attribution-Share Alike 3.0 Unported url (https://upload.wikimedia.org/wikipedia/commons/8/85/Robson_Street_at_night%2C_Vancouver%2C_BC%2C_Canada.JPG)
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner-text {
+  color: #e0e0e0;
+}

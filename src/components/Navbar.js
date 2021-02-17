@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect } from 'react';
 
 // Import FontAwesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
