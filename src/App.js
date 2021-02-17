@@ -1,7 +1,9 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './css/app.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import About from './components/About';
 
 // Import FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -11,24 +13,17 @@ library.add(fab, fas);
 
 function App() {
   return (
-    <div className="App">
-      <section id="home">
+    <BrowserRouter>
+      <div className="App">
         <Navbar />
-        <Home />
-      </section>
-      <section id="about">
-        
-      </section>
-      <section id="projects">
-        
-      </section>
-      <section id="contact">
-        
-      </section>
-      <footer id="footer">
+        <Switch>
+          <Redirect exact path="/" to="/home" />
+          <Route path="/home" component={Home} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </div>
+    </BrowserRouter>
 
-      </footer>
-    </div>
   );
 }
 

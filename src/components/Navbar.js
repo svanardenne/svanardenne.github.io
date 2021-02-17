@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 // Import FontAwesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,12 +17,12 @@ const Navbar = (props) => {
   return(
     <nav>
       <div className="link-wrapper">
-        <a className="nav-link" href="#home">Home</a>
-        <a className="nav-link" href="#about">About</a>
-        <a className="nav-link" href="#projects">Projects</a>
-        <a className="nav-link" href="#contact">Contact</a>
+        <NavLink className="nav-link" to="/home">Home</NavLink>
+        <NavLink className="nav-link" to="/about">About</NavLink>
+        <NavLink className="nav-link" to="/projects">Projects</NavLink>
+        <NavLink className="nav-link" to="/contact">Contact</NavLink>
       </div>
-      <FontAwesomeIcon icon={["fas", "bars"]} color="black" className="nav-toggle" onClick={navToggle} />
+      <FontAwesomeIcon icon={["fas", "bars"]} className="nav-toggle" onClick={navToggle} />
     </nav>
   );
 }

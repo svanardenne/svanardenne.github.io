@@ -1,25 +1,33 @@
 /**************************
+********* Colors **********
+**************************/
+/**************************
 ****** Base Elements ******
 **************************/
 body {
   background-color: #e0e0e0;
   margin: 0;
   font-size: 1.25em;
+  font-family: "Libre Baskerville", serif;
 }
 
 nav {
   position: relative;
-  background-color: #1b242f;
-  border-bottom: 3px solid #04c2c9;
+  background-color: #222629;
+  border-bottom: 3px solid #86c232;
   width: 100%;
   height: 50px;
+}
+
+img {
+  width: 100%;
 }
 
 /**************************
 ********* Navbar **********
 **************************/
 .link-wrapper {
-  background: #333;
+  background: #474b4f;
   position: absolute;
   top: 53px;
   height: 0;
@@ -37,10 +45,18 @@ nav {
   display: block;
   padding: 12px 20px;
   text-transform: uppercase;
+  transition: color 0.5s ease;
+}
+.nav-link:hover {
+  color: #86c232;
 }
 
 .visible {
   height: 220px;
+}
+
+.active {
+  color: #86c232;
 }
 
 .nav-toggle {
@@ -68,6 +84,7 @@ nav {
 
   .nav-link {
     display: inline;
+    font-family: "Libre Franklin", sans-serif;
   }
 
   .nav-toggle {
@@ -75,11 +92,11 @@ nav {
   }
 }
 /**************************
-********* Navbar **********
+********* Banner **********
 **************************/
 .banner {
   height: 100vh;
-  background-image: linear-gradient(to bottom, #282a36, rgba(68, 71, 90, 0.85)), url("../img/van-at-night.jpeg");
+  background-image: linear-gradient(to bottom, #222629, rgba(34, 38, 41, 0.85)), url("../img/van-at-night.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,6 +108,73 @@ nav {
 
 .banner-text {
   color: #e0e0e0;
+  text-align: center;
+  font-family: "Libre Franklin", sans-serif;
+}
+.banner-text h1 {
+  font-size: 48px;
+}
+
+.banner-buttons {
+  display: flex;
+  height: 150px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: "Libre Franklin", sans-serif;
+}
+.banner-buttons a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (min-width: 576px) {
+  .banner-buttons {
+    flex-direction: row;
+    height: auto;
+  }
+}
+/**************************
+********* About ***********
+**************************/
+.bio-wrapper {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 60px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+.bio-wrapper img {
+  padding-bottom: 25px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom: 1px solid #6b6e70;
+}
+
+.bio-title {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+/**************************
+********* Inputs **********
+**************************/
+.button {
+  text-decoration: none;
+  padding: 10px 20px;
+  min-width: 125px;
+  border: 2px solid #61892f;
+  font-size: 1em;
+  text-align: center;
+  color: #e0e0e0;
+  border-radius: 20px;
+  background-color: #61892f;
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+}
+.button:hover {
+  background-color: #86c232;
+  border-color: #222629;
+  color: #222629;
 }
 
 /*# sourceMappingURL=app.css.map */

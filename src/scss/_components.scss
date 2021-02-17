@@ -1,0 +1,22 @@
+/**************************
+********* Inputs **********
+**************************/
+.button {
+  text-decoration: none;
+  padding: 10px 20px;
+  min-width: 125px;
+  border: 2px solid $Accent-Dark;
+  font-size: 1em;
+  text-align: center;
+  color: $Base;
+  border-radius: 20px;
+  background-color: $Accent-Dark;
+  transition: background-color .5s ease,
+              border-color .5s ease,
+              color .5s ease;
+  &:hover {
+    background-color: $Accent;
+    border-color: $Primary;
+    color: $Primary;
+  }
+}

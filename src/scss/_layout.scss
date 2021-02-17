@@ -2,23 +2,28 @@
 ****** Base Elements ******
 **************************/
 body {
-  background-color: #e0e0e0;
+  background-color: $Base;
   margin: 0;
   font-size: 1.25em;
+  font-family: 'Libre Baskerville', serif;
 }
 nav {
   position: relative;
-  background-color: #1b242f;
-  border-bottom: 3px solid #04c2c9;
+  background-color: $Primary;
+  border-bottom: 3px solid $Accent;
   width: 100%;
   height: 50px;
+}
+
+img {
+  width: 100%;
 }
 
 /**************************
 ********* Navbar **********
 **************************/
 .link-wrapper {
-  background: #333;
+  background: $Primary-Light;
   position: absolute;
   top: 53px;
   height: 0;
@@ -30,17 +35,24 @@ nav {
   }
 }
 .nav-link {
-  color: #e0e0e0;
+  color: $Base;
   text-decoration: none;
   display: block;
   padding: 12px 20px;
   text-transform: uppercase;
+  transition: color .5s ease;
+  &:hover {
+    color: $Accent;
+  }
 }
 .visible {
   height: 220px;
 }
+.active {
+  color: $Accent;
+}
 .nav-toggle {
-  color: #e0e0e0;
+  color: $Base;
   position: absolute;
   right: 5vw;
   margin-top: 5px;
@@ -63,6 +75,7 @@ nav {
   }
   .nav-link {
     display: inline;
+    font-family: 'Libre Franklin', sans-serif;
   }
   .nav-toggle {
     display: none;
@@ -70,12 +83,12 @@ nav {
 }
 
 /**************************
-********* Navbar **********
+********* Banner **********
 **************************/
 .banner {
   height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(40,42,54, 1),
-                  rgba(68,71,90, .85)),
+  background-image: linear-gradient(to bottom, rgba(34, 38, 41, 1),
+  rgba(34, 38, 41, .85)),
                     url("../img/van-at-night.jpeg"); //Taken by Paul Gifford; found on Wikimedia Commons under Creative Commons Attribution-Share Alike 3.0 Unported url (https://upload.wikimedia.org/wikipedia/commons/8/85/Robson_Street_at_night%2C_Vancouver%2C_BC%2C_Canada.JPG)
   background-position: center;
   background-repeat: no-repeat;
@@ -86,5 +99,51 @@ nav {
   align-items: center;
 }
 .banner-text {
-  color: #e0e0e0;
+  color: $Base;
+  text-align: center;
+  font-family: 'Libre Franklin', sans-serif;
+  h1 {
+    font-size: 48px;
+  }
+}
+.banner-buttons {
+  display: flex;
+  height: 150px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: 'Libre Franklin', sans-serif;
+  a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media(min-width: 576px) {
+  .banner-buttons {
+    flex-direction: row;
+    height: auto;
+  }
+}
+
+/**************************
+********* About ***********
+**************************/
+
+.bio-wrapper {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 60px;
+  background: #e0e0e0;
+  box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+  img {
+    padding-bottom: 25px;
+    border-top-left-radius:50px;
+    border-top-right-radius: 50px;
+    border-bottom: 1px solid $Primary-Extra-Light;
+  }
+}
+.bio-title {
+  font-family: 'Libre Franklin', sans-serif;
 }

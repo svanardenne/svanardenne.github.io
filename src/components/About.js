@@ -1,0 +1,29 @@
+import React from 'react';
+import ProfileImg from '../img/Profile-pic-1.jpg'
+
+const About = (props) => {
+  return(
+    <section id="about">
+      <div className="bio-wrapper">
+        <img src={ProfileImg} alt="Picture of Shaun on white background" />
+        <div className="bio-text">
+          <h2 className="bio-title">Shaun &mdash; Full-Stack Developer</h2>
+          <p>Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt 
+          ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud 
+          exercitation ullamco laboris nisi ut 
+          aliquip ex ea commodo consequat. Duis 
+          aute irure dolor in reprehenderit in 
+          voluptate velit esse cillum dolore eu 
+          fugiat nulla pariatur. Excepteur sint 
+          occaecat cupidatat non proident, sunt in 
+          culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default About;
