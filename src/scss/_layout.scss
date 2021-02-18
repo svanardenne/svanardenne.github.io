@@ -104,6 +104,49 @@
 }
 
 /**************************
+********* Details *********
+**************************/
+.details-wrapper {
+  margin: 100px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1200px;
+  gap: 15px;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-basis: 50%;
+  max-width: 200px;
+  height: 250px;
+  & h3 {
+    font-size: 18px;
+  }
+  & p {
+    font-size: 14px;
+  }
+}
+.detail-icon {
+  width: 100% !important;
+  height: auto;
+  max-height: 50px;
+}
+@media(min-width: 768px) {
+  .detail {
+    flex-basis: 20%
+  }
+}
+@media(min-width: 1200px) {
+  .details-wrapper {
+    margin: 100px auto;
+  }
+}
+
+/**************************
 ********* About ***********
 **************************/
 
