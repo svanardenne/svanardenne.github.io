@@ -10,7 +10,7 @@ const Home = () => {
       <section id="home" className="main-content">
         <div className="banner">
           <div className="banner-text">
-            <h1>Hi, I'm Shaun</h1>
+            <h1>Hi, I'm Shaun van Ardenne</h1>
             <h1>I'm a full-stack Developer</h1>
           </div>
           <div className="banner-buttons">
