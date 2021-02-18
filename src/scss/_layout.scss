@@ -209,3 +209,19 @@
     flex-basis: 350px;
   }
 }
+
+/**************************
+********* Footer **********
+**************************/
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+.footer-name {
+  margin-top: 20px;
+}
+.copyright {
+  color: $Accent-Dark;
+}

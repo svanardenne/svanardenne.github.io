@@ -16,7 +16,11 @@ nav {
   height: 50px;
   z-index: 1000;
 }
-
+footer {
+  background-color: $Primary;
+  padding: 50px 0;
+  text-align: center;
+}
 img {
   width: 100%;
 }
@@ -51,4 +55,7 @@ img {
   color: $Accent-Dark;
   width: 100px;
   margin: 0 auto;
+}
+.icon-footer {
+  width: 50px;
 }

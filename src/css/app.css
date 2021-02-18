@@ -221,6 +221,24 @@
   }
 }
 /**************************
+********* Footer **********
+**************************/
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-name {
+  margin-top: 20px;
+}
+
+.copyright {
+  color: #61892f;
+}
+
+/**************************
 ****** Base Elements ******
 **************************/
 body {
@@ -238,6 +256,12 @@ nav {
   width: 100%;
   height: 50px;
   z-index: 1000;
+}
+
+footer {
+  background-color: #222629;
+  padding: 50px 0;
+  text-align: center;
 }
 
 img {
@@ -272,6 +296,10 @@ img {
   color: #61892f;
   width: 100px;
   margin: 0 auto;
+}
+
+.icon-footer {
+  width: 50px;
 }
 
 /*# sourceMappingURL=app.css.map */
