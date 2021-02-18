@@ -1,25 +1,4 @@
 /**************************
-****** Base Elements ******
-**************************/
-body {
-  background-color: $Base;
-  margin: 0;
-  font-size: 1.25em;
-  font-family: 'Libre Baskerville', serif;
-}
-nav {
-  position: relative;
-  background-color: $Primary;
-  border-bottom: 3px solid $Accent;
-  width: 100%;
-  height: 50px;
-}
-
-img {
-  width: 100%;
-}
-
-/**************************
 ********* Navbar **********
 **************************/
 .link-wrapper {
@@ -97,6 +76,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 53px;
 }
 .banner-text {
   color: $Base;
@@ -129,7 +109,7 @@ img {
 **************************/
 
 .bio-wrapper {
-  margin: 50px auto;
+  margin: 103px auto;
   width: 90%;
   max-width: 500px;
   padding: 10px;
@@ -154,9 +134,8 @@ img {
 .projects-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 50px 15px;
+  margin: 103px 15px 15px 50px;
   max-width: 1200px;
-  
 }
 .card-wrapper {
   margin-bottom: 50px;
@@ -177,7 +156,7 @@ img {
 }
 @media(min-width: 768px) {
   .projects-wrapper {
-    margin: 50px auto;
+    margin: 103px auto;
   }
   .card-wrapper {
     flex-basis: 300px;
