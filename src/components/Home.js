@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Home = () => {
   return(
     <React.Fragment>
-      <section id="home">
+      <section id="home" className="main-content">
         <div className="banner">
           <div className="banner-text">
             <h1>Hi, I'm Shaun</h1>

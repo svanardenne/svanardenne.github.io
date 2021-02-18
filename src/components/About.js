@@ -3,7 +3,7 @@ import ProfileImg from '../img/profile/Profile-pic-1.jpg';
 
 const About = (props) => {
   return(
-    <section id="about">
+    <section id="about" className="main-content">
       <div className="bio-wrapper">
         <img src={ProfileImg} alt="Picture of Shaun on white background" />
         <div className="bio-text">

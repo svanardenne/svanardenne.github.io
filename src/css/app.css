@@ -134,7 +134,9 @@
   height: 250px;
 }
 .detail h3 {
+  font-family: "Libre Franklin", sans-serif;
   font-size: 18px;
+  margin-bottom: 0;
 }
 .detail p {
   font-size: 14px;
@@ -152,6 +154,10 @@
   }
 }
 @media (min-width: 1200px) {
+  .detail h3 {
+    font-size: 1.25em;
+  }
+
   .details-wrapper {
     margin: 100px auto;
   }
@@ -232,10 +238,29 @@
 
 .footer-name {
   margin-top: 20px;
+  color: #e0e0e0;
 }
 
 .copyright {
-  color: #61892f;
+  color: #86c232;
+}
+
+.icon-footer {
+  width: 60%;
+}
+
+.footer-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #474b4f;
+}
+.footer-icon-wrapper a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /**************************
@@ -268,6 +293,16 @@ img {
   width: 100%;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
 /**************************
 ********* Inputs **********
 **************************/
@@ -296,10 +331,6 @@ img {
   color: #61892f;
   width: 100px;
   margin: 0 auto;
-}
-
-.icon-footer {
-  width: 50px;
 }
 
 /*# sourceMappingURL=app.css.map */
