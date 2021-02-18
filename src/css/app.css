@@ -2,6 +2,13 @@
 ********* Colors **********
 **************************/
 /**************************
+****** Main-Content *******
+**************************/
+.main-content {
+  flex-grow: 1;
+}
+
+/**************************
 ********* Navbar **********
 **************************/
 .link-wrapper {
@@ -191,7 +198,7 @@
 .projects-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 103px 15px 15px 50px;
+  margin: 103px 15px 50px 15px;
   max-width: 1200px;
 }
 
@@ -297,10 +304,6 @@ img {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.main-content {
-  flex-grow: 1;
 }
 
 /**************************
