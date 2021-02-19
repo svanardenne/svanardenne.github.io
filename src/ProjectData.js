@@ -13,16 +13,16 @@ const projectArray = [
         projectText: 'An employee directory with information generated randomly from randomuser.me using the Fetch API'
     },
     {
-        projectLink: "http://svanardenne.github.io/student-directory",
-        projectTitle: "Student Directory",
-        projectImage: "fs-project-2.png",
-        projectText: 'A student directory using data pagination and filtering techniques'
-    },
-    {
         projectLink: "http://svanardenne.github.io/Phrase-Hunter",
         projectTitle: "Phrase Hunter",
         projectImage: "fs-project-4.png",
         projectText: 'Word guessing game created using JavaScript classes'
+    },
+    {
+        projectLink: "http://svanardenne.github.io/student-directory",
+        projectTitle: "Student Directory",
+        projectImage: "fs-project-2.png",
+        projectText: 'A student directory using data pagination and filtering techniques'
     },
     {
         projectLink: "http://svanardenne.github.io/web-dashboard",

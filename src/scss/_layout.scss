@@ -87,10 +87,6 @@
 .banner-text {
   color: $Base;
   text-align: center;
-  font-family: 'Libre Franklin', sans-serif;
-  h1 {
-    font-size: 48px;
-  }
 }
 .banner-buttons {
   display: flex;
@@ -113,6 +109,9 @@
 /**************************
 ********* Details *********
 **************************/
+#details {
+  background-color: #fff;
+}
 .details-wrapper {
   margin: 100px 15px;
   display: flex;
@@ -131,7 +130,6 @@
   max-width: 200px;
   height: 250px;
   & h3 {
-    font-family: 'Libre Franklin', sans-serif;
     font-size: 18px;
     margin-bottom: 0;
   }
@@ -180,9 +178,6 @@
     border-bottom: 1px solid $Primary-Extra-Light;
   }
 }
-.bio-title {
-  font-family: 'Libre Franklin', sans-serif;
-}
 
 /**************************
 ******** Projects *********
@@ -222,6 +217,49 @@
   .card-wrapper {
     flex-basis: 350px;
   }
+}
+
+/**************************
+******** Carousel *********
+**************************/
+#carousel {
+  background-color: $Base;
+  padding: 0 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.carousel-root {
+  margin: 50px auto;
+  max-width: 800px;
+}
+.dot {
+  background: $Primary-Extra-Light !important;
+}
+.dot.selected {
+  background: $Accent !important;
+}
+.control-arrow {
+  background-color: $Accent !important;
+  opacity: 1 !important;
+}
+.carousel-status {
+  transform: translateX(-40px);
+  color: #fff !important;
+  background: $Accent !important;
+  border-radius: 5px;
+}
+.carousel-title {
+  color: $Primary;
+  margin-top: 50px;
+}
+.carousel-card-title {
+  color: $Base;
+  background: $Primary !important;
+  margin: 0 !important;
+  padding: 10px 0;
+}
+.carousel-link {
+  text-decoration: none;
 }
 
 /**************************

@@ -6,8 +6,8 @@ const About = (props) => {
     <section id="about" className="main-content">
       <div className="bio-wrapper">
         <img src={ProfileImg} alt="Picture of Shaun on white background" />
-        <div className="bio-text">
-          <h2 className="bio-title">Shaun &mdash; Full-Stack Developer</h2>
+        <div>
+          <h2>Shaun &mdash; Full-Stack Developer</h2>
           <p>Lorem ipsum dolor sit amet, 
           consectetur adipiscing elit, 
           sed do eiusmod tempor incididunt 

@@ -94,10 +94,6 @@
 .banner-text {
   color: #e0e0e0;
   text-align: center;
-  font-family: "Libre Franklin", sans-serif;
-}
-.banner-text h1 {
-  font-size: 48px;
 }
 
 .banner-buttons {
@@ -121,6 +117,10 @@
 /**************************
 ********* Details *********
 **************************/
+#details {
+  background-color: #fff;
+}
+
 .details-wrapper {
   margin: 100px 15px;
   display: flex;
@@ -141,7 +141,6 @@
   height: 250px;
 }
 .detail h3 {
-  font-family: "Libre Franklin", sans-serif;
   font-size: 18px;
   margin-bottom: 0;
 }
@@ -188,10 +187,6 @@
   border-bottom: 1px solid #6b6e70;
 }
 
-.bio-title {
-  font-family: "Libre Franklin", sans-serif;
-}
-
 /**************************
 ******** Projects *********
 **************************/
@@ -234,6 +229,57 @@
   }
 }
 /**************************
+******** Carousel *********
+**************************/
+#carousel {
+  background-color: #e0e0e0;
+  padding: 0 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.carousel-root {
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.dot {
+  background: #6b6e70 !important;
+}
+
+.dot.selected {
+  background: #86c232 !important;
+}
+
+.control-arrow {
+  background-color: #86c232 !important;
+  opacity: 1 !important;
+}
+
+.carousel-status {
+  transform: translateX(-40px);
+  color: #fff !important;
+  background: #86c232 !important;
+  border-radius: 5px;
+}
+
+.carousel-title {
+  color: #222629;
+  margin-top: 50px;
+}
+
+.carousel-card-title {
+  color: #e0e0e0;
+  background: #222629 !important;
+  margin: 0 !important;
+  padding: 10px 0;
+}
+
+.carousel-link {
+  text-decoration: none;
+}
+
+/**************************
 ********* Footer **********
 **************************/
 .footer-links {
@@ -273,6 +319,10 @@
 /**************************
 ****** Base Elements ******
 **************************/
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #e0e0e0;
   margin: 0;
@@ -300,12 +350,26 @@ img {
   width: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Libre Franklin", sans-serif;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+@media (max-width: 576px) {
+  body {
+    font-size: 1em;
+  }
+}
 /**************************
 ********* Inputs **********
 **************************/

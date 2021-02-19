@@ -1,6 +1,9 @@
 /**************************
 ****** Base Elements ******
 **************************/
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: $Base;
   margin: 0;
@@ -24,10 +27,23 @@ footer {
 img {
   width: 100%;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Libre Franklin', sans-serif;
+}
 .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+@media(max-width: 576px) {
+  body {
+    font-size: 1em;
+  }
 }
 
 /**************************
