@@ -1,6 +1,18 @@
 //Array with project card info
 const projectArray = [
     {
+        projectLink: "http://eldritchwebdesign.ca/full-stack-course-app",
+        projectTitle: "Full-Stack Course Management App",
+        projectImage: "full-stack-course-app.png",
+        projectText: 'A full-stack app created using React, Node, Express, and SQL'
+    },
+    {
+        projectLink: "https://stormy-waters-08943.herokuapp.com/",
+        projectTitle: "Library CRUD Application",
+        projectImage: "library-crud-application.png",
+        projectText: 'A CRUD application for libraries. The user can view, add, update, or remove items from a library database.'
+    },
+    {
         projectLink: "http://svanardenne.github.io/elder-gods-brewing",
         projectTitle: "React.js Landing Page",
         projectImage: "elder-gods-landing.png",

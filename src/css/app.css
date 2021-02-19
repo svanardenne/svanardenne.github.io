@@ -266,6 +266,10 @@
 .carousel-title {
   color: #222629;
   margin-top: 50px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #222629;
+  display: inline-block;
 }
 
 .carousel-card-title {
