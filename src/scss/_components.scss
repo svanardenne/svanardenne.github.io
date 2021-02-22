@@ -63,9 +63,8 @@ h6 {
               border-color .5s ease,
               color .5s ease;
   &:hover {
-    background-color: $Accent;
-    border-color: $Primary;
-    color: $Primary;
+    background-color: darken($Accent-Dark, 10%);
+    border-color: $Base;
   }
 }
 

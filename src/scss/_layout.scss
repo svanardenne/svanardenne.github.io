@@ -236,16 +236,16 @@
   background: $Primary-Extra-Light !important;
 }
 .dot.selected {
-  background: $Accent !important;
+  background: $Accent-Dark !important;
 }
 .control-arrow {
-  background-color: $Accent !important;
+  background-color: $Accent-Dark !important;
   opacity: 1 !important;
 }
 .carousel-status {
   transform: translateX(-40px);
   color: #fff !important;
-  background: $Accent !important;
+  background: $Accent-Dark !important;
   border-radius: 5px;
 }
 .carousel-title {

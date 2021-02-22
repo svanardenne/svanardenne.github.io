@@ -248,18 +248,18 @@
 }
 
 .dot.selected {
-  background: #86c232 !important;
+  background: #61892f !important;
 }
 
 .control-arrow {
-  background-color: #86c232 !important;
+  background-color: #61892f !important;
   opacity: 1 !important;
 }
 
 .carousel-status {
   transform: translateX(-40px);
   color: #fff !important;
-  background: #86c232 !important;
+  background: #61892f !important;
   border-radius: 5px;
 }
 
@@ -390,9 +390,8 @@ h6 {
   transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
 }
 .button:hover {
-  background-color: #86c232;
-  border-color: #222629;
-  color: #222629;
+  background-color: #466322;
+  border-color: #e0e0e0;
 }
 
 /**************************
