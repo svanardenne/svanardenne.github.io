@@ -21,10 +21,7 @@ const Home = (props) => {
             <h1>Hi, I'm Shaun van Ardenne</h1>
             <h1>I'm a full-stack Developer</h1>
           </div>
-          <div className="banner-buttons">
-            <Link className="button" to="/about">About Me</Link>
-            <Link className="button" to="/projects">See My Work</Link>
-          </div>
+            <a className="button" href="#details">Check it out!</a>
         </div>
       </section>
       <section id="details">

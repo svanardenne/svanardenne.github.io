@@ -136,7 +136,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  flex-basis: 50%;
+  flex-basis: 45%;
   max-width: 200px;
   height: 250px;
 }
@@ -146,6 +146,7 @@
 }
 .detail p {
   font-size: 14px;
+  min-height: 72px;
 }
 
 .detail-icon {
@@ -327,6 +328,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #e0e0e0;
   margin: 0;
@@ -338,7 +343,7 @@ nav {
   position: fixed;
   top: 0;
   background-color: #222629;
-  border-bottom: 3px solid #86c232;
+  border-bottom: 3px solid #61892f;
   width: 100%;
   height: 50px;
   z-index: 1000;
@@ -348,6 +353,7 @@ footer {
   background-color: #222629;
   padding: 50px 0;
   text-align: center;
+  border-top: 3px solid #61892f;
 }
 
 img {
@@ -394,6 +400,11 @@ h6 {
   border-color: #e0e0e0;
 }
 
+@media (max-width: 500px) {
+  .button {
+    width: 90%;
+  }
+}
 /**************************
 ********** Icons **********
 **************************/
