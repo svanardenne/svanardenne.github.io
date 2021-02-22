@@ -20,9 +20,27 @@ const Home = (props) => {
   const handleModal = (data) => {
     setModalIndex(data);
     if (modalState === false) {
-      setModalState({modalState: true});
+      setModalState(true);
     } else if (modalState === true) {
-      setModalState({modalState: false});
+      setModalState(false);
+    }
+  }
+
+  const handleNext = () => {
+    if (modalIndex < projects.length) {
+      setModalIndex(modalIndex + 1);
+    }
+  }
+
+  const handlePrevious = () => {
+    if (modalIndex > 1) {
+      setModalIndex(modalIndex - 1);
+    }
+  }
+
+  const handleClose = () => {
+    if (modalState === true) {
+      setModalState(false);
     }
   }
 
@@ -30,7 +48,12 @@ const Home = (props) => {
     <React.Fragment>
       {modalState
       ?
-      <Modal projects={projects[modalIndex]} />
+      <Modal
+        handleClose={handleClose}
+        handleNext={handleNext} 
+        handlePrevious={handlePrevious} 
+        projects={projects[modalIndex -1]} 
+      />
       :
       null}
       <section id="home" className="main-content">
