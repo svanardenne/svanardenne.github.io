@@ -322,6 +322,51 @@
 }
 
 /**************************
+****** Modal Popup ********
+**************************/
+.modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(34, 38, 41, 0.5);
+}
+
+.modal {
+  background: rgba(34, 38, 41, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(34, 38, 41, 0.37);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  border-radius: 17px;
+  margin: 0 auto;
+  height: 600px;
+}
+
+.modal-info {
+  height: 100%;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-info h2 {
+  color: #e0e0e0;
+  padding: 20px 0;
+}
+.modal-info p {
+  justify-self: center;
+  color: #e0e0e0;
+}
+
+/**************************
 ****** Base Elements ******
 **************************/
 * {

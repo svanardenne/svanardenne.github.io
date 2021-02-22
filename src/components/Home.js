@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import Modal from './Modal';
 import CarouselCard from './CarouselCard';
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -12,9 +13,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Home = (props) => {
 
   const [projects, setProjects] = useState(props.context.projectData.slice(0, 3));
+  const [ modalState, setModalState ] = useState(false);
+  const [ modalIndex, setModalIndex ] = useState([]);
+
+  // Sets data for the modal window and creates the popup
+  const handleModal = (data) => {
+    setModalIndex(data);
+    if (modalState === false) {
+      setModalState({modalState: true});
+    } else if (modalState === true) {
+      setModalState({modalState: false});
+    }
+  }
 
   return(
     <React.Fragment>
+      {modalState
+      ?
+      <Modal projects={projects[modalIndex]} />
+      :
+      null}
       <section id="home" className="main-content">
         <div className="banner">
           <div className="banner-text">
@@ -59,7 +77,7 @@ const Home = (props) => {
       <section id="carousel">
         <h1 className="carousel-title">Projects</h1>
         <Carousel showThumbs={false} className="carousel">
-          {projects.map((project, i) => <CarouselCard className="carousel-slide" key={i} project={project} />)}
+          {projects.map((project, i) => <CarouselCard handleModal={handleModal} className="carousel-slide" key={i} project={project} />)}
         </Carousel>
         <Link className="button" to="/projects">More Projects</Link>
       </section>

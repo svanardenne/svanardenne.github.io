@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const CarouselCard = (props) => {
   return(
     <React.Fragment>
-      <Link className="carousel-link" to="/projects">
+      <div onClick={() => props.handleModal(props.project.id)} className="carousel-link" to="/projects">
         <div className="carousel-card-title">
           <h3>{props.project.projectTitle}</h3>
         </div>
@@ -14,7 +14,7 @@ const CarouselCard = (props) => {
             alt={props.project.projectTitle}
           />
         </div>
-      </Link>
+      </div>
     </React.Fragment>
   );
 }
