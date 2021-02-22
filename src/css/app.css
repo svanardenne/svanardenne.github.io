@@ -363,21 +363,25 @@
 
 .modal-left-arrow {
   position: absolute;
-  left: -50px;
-  top: 50%;
+  left: 0;
+  bottom: 0;
   width: 40px;
+  background-color: #61892f;
+  border-bottom-left-radius: 10px;
 }
 
 .modal-right-arrow {
   position: absolute;
-  right: -50px;
-  top: 50%;
+  right: 0;
+  bottom: 0;
   width: 40px;
+  background-color: #61892f;
+  border-bottom-right-radius: 10px;
 }
 
 .arrow-icon {
-  color: #222629;
-  width: 100% !important;
+  color: #e0e0e0;
+  width: 80% !important;
   height: auto;
   cursor: pointer;
 }

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Modal from './Modal';
 import CarouselCard from './CarouselCard';
 
+// Imports React Responsive Carousel
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
@@ -12,6 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Home = (props) => {
 
+  // Sets state for this component
   const [projects, setProjects] = useState(props.context.projectData.slice(0, 3));
   const [ modalState, setModalState ] = useState(false);
   const [ modalIndex, setModalIndex ] = useState([]);
@@ -26,18 +28,21 @@ const Home = (props) => {
     }
   }
 
+  // Handler for moving to next project in modal window on click
   const handleNext = () => {
     if (modalIndex < projects.length) {
       setModalIndex(modalIndex + 1);
     }
   }
 
+  // Handler for moving to previous project in modal window on click
   const handlePrevious = () => {
     if (modalIndex > 1) {
       setModalIndex(modalIndex - 1);
     }
   }
 
+  // Handles the closing of the modal window
   const handleClose = () => {
     if (modalState === true) {
       setModalState(false);
@@ -46,6 +51,7 @@ const Home = (props) => {
 
   return(
     <React.Fragment>
+      {/* Creates modal window based on state */}
       {modalState
       ?
       <Modal
@@ -53,6 +59,7 @@ const Home = (props) => {
         handleNext={handleNext} 
         handlePrevious={handlePrevious} 
         projects={projects[modalIndex -1]} 
+        modalIndex={modalIndex}
       />
       :
       null}
