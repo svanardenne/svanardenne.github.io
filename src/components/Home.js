@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 // Component Imports
 import Header from './Header';
 import Details from './Details';
+import SlideShow from './Carousel';
 import Modal from './Modal';
-import CarouselCard from './CarouselCard';
-
-// Imports React Responsive Carousel
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 
 
 const Home = (props) => {
@@ -66,13 +61,10 @@ const Home = (props) => {
       null}
       <Header />
       <Details />
-      <section id="carousel">
-        <h1 className="carousel-title">Projects</h1>
-        <Carousel showThumbs={false} className="carousel">
-          {projects.map((project, i) => <CarouselCard handleModal={handleModal} className="carousel-slide" key={i} project={project} />)}
-        </Carousel>
-        <Link className="button" to="/projects">More Projects</Link>
-      </section>
+      <SlideShow 
+        projects={projects} 
+        handleModal={handleModal} 
+      />
     </React.Fragment>
   );
 }
