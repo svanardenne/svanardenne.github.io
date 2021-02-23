@@ -114,6 +114,11 @@
     height: auto;
   }
 }
+@media (min-width: 1024px) {
+  .banner-text {
+    font-size: 2rem;
+  }
+}
 /**************************
 ********* Details *********
 **************************/
@@ -282,6 +287,7 @@
 
 .carousel-link {
   text-decoration: none;
+  cursor: pointer;
 }
 
 /**************************
@@ -470,7 +476,7 @@ h6 {
   font-size: 1em;
   text-align: center;
   color: #e0e0e0;
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: #61892f;
   transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
 }

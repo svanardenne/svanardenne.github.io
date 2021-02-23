@@ -105,6 +105,11 @@
     height: auto;
   }
 }
+@media(min-width: 1024px) {
+  .banner-text {
+    font-size: 2rem;
+  }
+}
 
 /**************************
 ********* Details *********
@@ -265,6 +270,7 @@
 }
 .carousel-link {
   text-decoration: none;
+  cursor: pointer;
 }
 
 /**************************
