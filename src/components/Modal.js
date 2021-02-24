@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Modal = (props) => {
 
-  const project = props.projects;
+  const project = props.project;
+  const projects = props.projects;
 
   return(
     <div className="modal-wrapper">
@@ -29,7 +30,7 @@ const Modal = (props) => {
           </div>
         </div>
         {/* Renders arrow only if not last project in list */}
-        {props.modalIndex < 3
+        {props.modalIndex < projects.length
         ?
         <div onClick={() => props.handleNext()} className="modal-right-arrow">
           <FontAwesomeIcon className="arrow-icon" icon={['fas', "arrow-right"]} />

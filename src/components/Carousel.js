@@ -13,7 +13,7 @@ const SlideShow = (props) => {
     <section id="carousel">
       <h1 className="carousel-title">Projects</h1>
       <Carousel showThumbs={false} className="carousel">
-        {props.projects.map((project, i) => <CarouselCard handleModal={props.handleModal} className="carousel-slide" key={i} project={project} />)}
+        {props.projects.map((project, i) => <CarouselCard handleModal={props.handleModal} className="carousel-slide" key={i} projects={props.projects} project={project} />)}
       </Carousel>
       <Link className="button" to="/projects">More Projects</Link>
     </section>

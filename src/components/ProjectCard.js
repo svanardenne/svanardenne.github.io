@@ -11,9 +11,9 @@ const ProjectCard = (props) => {
         src={require(`../img/projects/${project.projectImage}`).default} 
         alt={project.projectTitle}
       />
-      <div>
-        <h3>{project.projectTitle}</h3>
-        <ReactMarkdown source={project.projectText} />
+      <div className="project-info">
+        <h3 className="project-title">{project.projectTitle}</h3>
+        <div onClick={() => props.handleModal(project.id)} className="button">More info</div>
       </div>
     </div>
   );

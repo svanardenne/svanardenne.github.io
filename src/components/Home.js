@@ -54,7 +54,8 @@ const Home = (props) => {
         handleClose={handleClose}
         handleNext={handleNext} 
         handlePrevious={handlePrevious} 
-        projects={projects[modalIndex -1]} 
+        projects={projects}
+        project={projects[modalIndex -1]} 
         modalIndex={modalIndex}
       />
       :
