@@ -3,6 +3,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Modal = (props) => {
+
+  const project = props.projects;
+
   return(
     <div className="modal-wrapper">
       <div className="modal">
@@ -19,8 +22,8 @@ const Modal = (props) => {
         null
         }
         <div className="modal-details">
-          <h2>{props.projects.projectTitle}</h2>
-          <p>{props.projects.projectText}</p>
+          <h2>{project.projectTitle}</h2>
+          <p>{project.projectText}</p>
         </div>
         {/* Renders arrow only if not last project in list */}
         {props.modalIndex < 3
@@ -32,8 +35,8 @@ const Modal = (props) => {
         null
         }
         <div className="modal-buttons">
-          <a className="button" target="_blank" href={props.projects.projectLink}>Live Demo</a>
-          <a className="button" target="_blank" href={props.projects.githubLink}>Github</a>
+          <a className="button" target="_blank" href={project.projectLink}>Live Demo</a>
+          <a className="button" target="_blank" href={project.githubLink}>Github</a>
         </div>
       </div>
     </div>
