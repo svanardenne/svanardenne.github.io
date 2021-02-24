@@ -31,7 +31,10 @@ const Modal = (props) => {
         :
         null
         }
-
+        <div className="modal-buttons">
+          <a className="button" target="_blank" href={props.projects.projectLink}>Live Demo</a>
+          <a className="button" target="_blank" href={props.projects.githubLink}>Github</a>
+        </div>
       </div>
     </div>
   );
