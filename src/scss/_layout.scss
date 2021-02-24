@@ -328,7 +328,7 @@
   border-radius: 10px;
   margin: 0 auto;
   max-width: 500px;
-  height: 600px;
+  height: 100vh;
   h2 {
     color: $Base;
     background-color: $Primary;
@@ -343,6 +343,7 @@
   }
 }
 .modal-left-arrow {
+  z-index: 5000;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -351,6 +352,7 @@
   border-bottom-left-radius: 10px;
 }
 .modal-right-arrow {
+  z-index: 5000;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -377,5 +379,23 @@
   cursor: pointer;
 }
 .modal-buttons {
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  gap: 10px;
+  max-width: 200px;
+}
+.modal-button {
+
+}
+@media(min-width: 576px) {
+  .modal {
+    height: 800px;
+  }
 }
