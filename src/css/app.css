@@ -258,6 +258,8 @@
 .control-arrow {
   background-color: #61892f !important;
   opacity: 1 !important;
+  bottom: 0 !important;
+  top: auto !important;
 }
 
 .carousel-status {
@@ -265,6 +267,8 @@
   color: #fff !important;
   background: #61892f !important;
   border-radius: 5px;
+  transform: translateX(0);
+  margin-top: 0;
 }
 
 .carousel-title {
@@ -363,6 +367,10 @@
 .modal p {
   justify-self: center;
   color: #474b4f;
+}
+
+.modal-details {
+  margin: 0 15px;
 }
 
 .modal-left-arrow {

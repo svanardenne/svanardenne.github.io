@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
 const ProjectCard = (props) => {
 
@@ -12,9 +13,7 @@ const ProjectCard = (props) => {
       />
       <div>
         <h3>{project.projectTitle}</h3>
-        <p>
-          {project.projectText}
-        </p>
+        <ReactMarkdown source={project.projectText} />
       </div>
     </div>
   );

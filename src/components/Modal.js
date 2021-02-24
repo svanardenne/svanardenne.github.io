@@ -22,9 +22,11 @@ const Modal = (props) => {
         :
         null
         }
-        <div className="modal-details">
+        <div>
           <h2>{project.projectTitle}</h2>
-          <ReactMarkdown source={project.projectText} />
+          <div className="modal-details">
+            <ReactMarkdown source={project.projectText} />
+          </div>
         </div>
         {/* Renders arrow only if not last project in list */}
         {props.modalIndex < 3
@@ -36,8 +38,8 @@ const Modal = (props) => {
         null
         }
         <div className="modal-buttons">
-          <a className="button modal-button" target="_blank" href={project.projectLink}>Live Demo</a>
-          <a className="button modal-button" target="_blank" href={project.githubLink}>Github</a>
+          <a className="button" target="_blank" href={project.projectLink}>Live Demo</a>
+          <a className="button" target="_blank" href={project.githubLink}>Github</a>
         </div>
       </div>
     </div>
