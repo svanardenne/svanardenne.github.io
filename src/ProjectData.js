@@ -6,7 +6,7 @@ const projectArray = [
         projectLink: "https://eldritchwebdesign.ca/full-stack-course-app",
         projectTitle: "Full-Stack Course Management App",
         projectImage: "full-stack-course-app.png",
-        projectText: `This project is a demonstration of a full stack CRUD ap*p using React on th*e front end, node/express on the back end, and an sqlite database.
+        projectText: `This project is a demonstration of a full stack CRUD app using React on the front end, node/express on the back end, and an sqlite database.
         The user is able to create an account, log in, and create, update and view courses.`,
         projectTech: [
             'React',
@@ -42,7 +42,7 @@ const projectArray = [
         projectText: 'Landing page created with React.js and Bootstrap',
         projectTech: [
             'React',
-            'React Bootstrap',
+            'Bootstrap',
             'JavaScript'
         ]
     },

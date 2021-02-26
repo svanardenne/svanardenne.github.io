@@ -31,9 +31,6 @@
     color: $Accent;
   }
 }
-.visible {
-  height: 220px;
-}
 .active {
   color: $Accent;
 }
@@ -189,7 +186,7 @@
 .projects-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 103px 15px 50px 15px;
+  margin: 0 15px 50px 15px;
   max-width: 1200px;
 }
 .card-wrapper {
@@ -228,6 +225,17 @@
   cursor: pointer;
   margin: 0 auto 15px;
 }
+.projects-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 53px;
+  color: $Primary;
+  padding-bottom: 10px;
+  border-bottom: 5px solid $Primary;
+  display: inline-block;
+  width: fit-content;
+}
 @media(min-width: 576px) {
   .projects-wrapper {
     flex-direction: row;
@@ -238,7 +246,7 @@
 }
 @media(min-width: 768px) {
   .projects-wrapper {
-    margin: 103px auto;
+    margin: 0 auto;
   }
   .card-wrapper {
     flex-basis: 300px;
@@ -352,13 +360,14 @@
   background-color:rgba(34, 38, 41, .5);
 }
 .modal {
+  font-size: .8rem;
   position: relative;
   background-color: $Base;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   text-align: center;
   border-radius: 10px;
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 700px;
   height: 100vh;
   h2 {
     color: $Base;
@@ -375,6 +384,35 @@
 }
 .modal-details {
   margin: 0 15px;
+  border-bottom: 2px solid $Primary-Extra-Light;
+  h3 {
+    color: $Primary;
+  }
+  p {
+    padding-bottom: 23.4px;
+    border-bottom: 2px solid $Primary-Extra-Light;
+  }
+}
+.modal-tech {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: left;
+  list-style-position: inside;
+  max-width: 350px;
+  margin: 0 auto;
+  max-height: 100px;
+  margin-bottom: 13.4px;
+  li {
+    flex-basis: 50%;
+    color: $Primary-Light;
+    margin-bottom: 10px;
+  }
+}
+.modal-img {
+  width: 70%;
+  margin-top: 23.4px;
 }
 .modal-left-arrow {
   z-index: 5000;
@@ -423,13 +461,20 @@
   right: 0;
   margin: auto;
   gap: 10px;
-  max-width: 300px;
+  max-width: 200px;
 }
 @media(min-width: 576px) {
   .modal {
     height: 800px;
+    font-size: inherit;
   }
   .modal-buttons {
     flex-direction: row;
+    max-width: 300px;
+  }
+}
+@media(min-width: 700px) {
+  .modal {
+    width: 700px;
   }
 }

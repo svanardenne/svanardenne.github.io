@@ -43,6 +43,7 @@ const Projects = (props) => {
   return(
     <React.Fragment>
       {/* Creates modal window based on state */}
+      <h1 className="projects-title">Projects</h1>
       {modalState
       ?
       <Modal
