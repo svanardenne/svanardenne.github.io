@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -26,7 +25,7 @@ const Modal = (props) => {
         <div>
           <h2>{project.projectTitle}</h2>
           <div className="modal-details">
-            <ReactMarkdown source={project.projectText} />
+            <p>{project.projectText}</p>
           </div>
         </div>
         {/* Renders arrow only if not last project in list */}
