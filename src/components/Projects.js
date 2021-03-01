@@ -41,7 +41,7 @@ const Projects = (props) => {
   }
 
   return(
-    <React.Fragment>
+    <section id="projects">
       {/* Creates modal window based on state */}
       <h2 className="projects-title">Projects</h2>
       {modalState
@@ -59,7 +59,7 @@ const Projects = (props) => {
       <div className="projects-wrapper main-content">
         {projects.map((project, i)=> <ProjectCard key={i} projects={projects} project={project} handleModal={handleModal} />)}
       </div>
-    </React.Fragment>
+    </section>
 
   );
 }

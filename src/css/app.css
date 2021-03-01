@@ -232,7 +232,6 @@
 }
 
 .project-button {
-  cursor: pointer;
   margin: 0 auto 15px;
 }
 
@@ -248,7 +247,6 @@
   color: #222629;
   padding-bottom: 10px;
   border-bottom: 5px solid #222629;
-  display: inline-block;
   width: fit-content;
 }
 
@@ -375,14 +373,22 @@
 ******** Contact **********
 **************************/
 .contact-wrapper {
-  margin: 100px 0 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: 0 0 50px;
 }
 
 .form-wrapper {
   margin: 0 15px;
+}
+
+.contact-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 53px;
+  color: #222629;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #222629;
+  width: fit-content;
 }
 
 .contact-form {
@@ -394,6 +400,8 @@
   border: 2px solid #61892f;
 }
 .contact-form input {
+  color: #e0e0e0;
+  font-size: 1rem;
   margin-bottom: 5px;
   padding: 10px 10px;
   width: 100%;
@@ -408,6 +416,8 @@
   color: #e0e0e0;
 }
 .contact-form textarea {
+  color: #e0e0e0;
+  font-size: 1.25rem;
   padding: 10px 10px 150px 10px;
   width: 100%;
   background-color: #474b4f;
@@ -634,6 +644,7 @@ h6 {
 ********* Inputs **********
 **************************/
 .button {
+  cursor: pointer;
   text-decoration: none;
   padding: 10px 20px;
   min-width: 125px;
