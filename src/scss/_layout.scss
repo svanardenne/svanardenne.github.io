@@ -347,6 +347,58 @@
 }
 
 /**************************
+******** Contact **********
+**************************/
+.contact-wrapper {
+  margin: 100px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-wrapper {
+  margin: 0 15px;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 15px;
+  background-color: $Primary;
+  border-radius: 5px;
+  border: 2px solid $Accent-Dark;
+  input {
+    margin-bottom: 5px;
+    padding: 10px 10px;
+    width: 100%;
+    background-color: $Primary-Light;
+    border: none;
+    outline: none;
+    &:focus {
+      color: $Base;
+    }
+    &::placeholder {
+      color: $Base;
+    }
+  }
+  textarea {
+    padding: 10px 10px 150px 10px;
+    width: 100%;
+    background-color: $Primary-Light;
+    border: none;
+    outline: none;
+    &:focus {
+      color: $Base;
+    }
+    &::placeholder {
+      color: $Base;
+    }
+  }
+  .form-button {
+    width: 100%;
+  }
+}
+
+
+/**************************
 ****** Modal Popup ********
 **************************/
 .modal-wrapper {

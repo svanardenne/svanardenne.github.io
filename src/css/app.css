@@ -372,6 +372,59 @@
 }
 
 /**************************
+******** Contact **********
+**************************/
+.contact-wrapper {
+  margin: 100px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-wrapper {
+  margin: 0 15px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 15px;
+  background-color: #222629;
+  border-radius: 5px;
+  border: 2px solid #61892f;
+}
+.contact-form input {
+  margin-bottom: 5px;
+  padding: 10px 10px;
+  width: 100%;
+  background-color: #474b4f;
+  border: none;
+  outline: none;
+}
+.contact-form input:focus {
+  color: #e0e0e0;
+}
+.contact-form input::placeholder {
+  color: #e0e0e0;
+}
+.contact-form textarea {
+  padding: 10px 10px 150px 10px;
+  width: 100%;
+  background-color: #474b4f;
+  border: none;
+  outline: none;
+}
+.contact-form textarea:focus {
+  color: #e0e0e0;
+}
+.contact-form textarea::placeholder {
+  color: #e0e0e0;
+}
+.contact-form .form-button {
+  width: 100%;
+}
+
+/**************************
 ****** Modal Popup ********
 **************************/
 .modal-wrapper {
@@ -543,7 +596,7 @@ nav {
   border-bottom: 3px solid #61892f;
   width: 100%;
   height: 50px;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 footer {
