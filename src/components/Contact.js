@@ -22,7 +22,7 @@ class Contact extends Component {
     });
   }
 
-  // Handles th submission of form data to mail API
+  // Handles the submission of form data to mail API
   handleSubmit = (e) => {
     e.preventDefault();
     axios.post(apiURL, this.state).then((res) => {
