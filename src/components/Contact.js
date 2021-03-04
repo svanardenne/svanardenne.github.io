@@ -8,6 +8,7 @@ class Contact extends Component {
 
   // Sets state for controlled inputs
   state= {
+    submitState: 'Submit',
     name: "",
     email: "",
     message: "",
@@ -25,11 +26,14 @@ class Contact extends Component {
   // Handles the submission of form data to mail API
   handleSubmit = (e) => {
     e.preventDefault();
+    this.setState({submitState: 'Sending...'});
     axios.post(apiURL, this.state).then((res) => {
       if (res.data.status === 'success') {
+        this.setState({submitState: 'Submit'});
         alert("Message Sent.");
         this.setState({name: '', email: '', subject: '', message: ''});
       } else if (res.data.status === 'fail') {
+        this.setState({submitState: 'Submit'});
         alert("Message failed to send.");
       }
     });
@@ -44,7 +48,7 @@ class Contact extends Component {
             <input onChange={this.handleChange} value={this.state.name} type="text" name="name" placeholder="Name" />
             <input onChange={this.handleChange} value={this.state.email} type="email" name="email" placeholder="Enter Email" />
             <textarea onChange={this.handleChange} value={this.state.message} type="text" name="message" placeholder="Your Message" />
-            <button type="submit" className="button form-button">Submit</button>
+            <button type="submit" className="button form-button">{this.state.submitState}</button>
           </form>
         </div>
       </section>
