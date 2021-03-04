@@ -434,6 +434,34 @@
   width: 100%;
 }
 
+.contact-modal {
+  margin: 0 auto;
+  min-width: 300px;
+  min-height: 100px;
+  max-width: 400px;
+  background-color: #e0e0e0;
+  border: 5px solid #222629;
+}
+
+.message-status {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 15px;
+}
+.message-status span {
+  margin-bottom: 15px;
+  display: block;
+  font-size: 16px;
+}
+.message-status .contact-modal-button {
+  padding: 5px;
+  min-width: 0;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
 /**************************
 ****** Modal Popup ********
 **************************/

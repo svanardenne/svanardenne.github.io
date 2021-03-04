@@ -9,6 +9,7 @@ class Contact extends Component {
   // Sets state for controlled inputs
   state= {
     submitState: 'Submit',
+    submitMessage: '',
     name: "",
     email: "",
     message: "",
@@ -26,15 +27,20 @@ class Contact extends Component {
   // Handles the submission of form data to mail API
   handleSubmit = (e) => {
     e.preventDefault();
+    const data = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    }
     this.setState({submitState: 'Sending...'});
-    axios.post(apiURL, this.state).then((res) => {
+    axios.post(apiURL, data).then((res) => {
       if (res.data.status === 'success') {
         this.setState({submitState: 'Submit'});
-        alert("Message Sent.");
+        this.setState({submitMessage: 'Message sent.'});
         this.setState({name: '', email: '', subject: '', message: ''});
       } else if (res.data.status === 'fail') {
         this.setState({submitState: 'Submit'});
-        alert("Message failed to send.");
+        this.setState({submitMessage: 'Message failed to send.'});
       }
     });
   }
@@ -42,7 +48,7 @@ class Contact extends Component {
   render() {
     return(
       <section id="contact" className="main-content contact-wrapper">
-      <h2 className="contact-title">Contact</h2>
+        <h2 className="contact-title">Contact</h2>
         <div className="form-wrapper">
           <form onSubmit={this.handleSubmit} className="contact-form">
             <input onChange={this.handleChange} value={this.state.name} type="text" name="name" placeholder="Name" />
@@ -51,6 +57,20 @@ class Contact extends Component {
             <button type="submit" className="button form-button">{this.state.submitState}</button>
           </form>
         </div>
+        {this.state.submitMessage !== ''
+        ?
+        <div className="modal-wrapper">
+          <div className="contact-modal">
+            <div className="message-status">
+              <span>{this.state.submitMessage}</span>
+              <button onClick={() => this.setState({submitMessage: ''})} className="button contact-modal-button">Close</button>
+            </div>
+          </div>
+        </div>
+        :
+        null
+        }
+
       </section>
     );
   }
