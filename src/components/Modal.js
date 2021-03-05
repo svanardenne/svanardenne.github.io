@@ -1,25 +1,43 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Import FontAwesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Modal = (props) => {
 
-  const project = props.project;
-  const projects = props.projects;
+  // Global variables imported through props
+  const {
+    modalIndex,
+    project,
+    projects
+  } = props;
+
+  // Global handlers imported through props
+  const {
+    handleClose,
+    handleNext,
+    handlePrevious
+  } = props;
+
+  // Fades in the modal window on component mount
+  useEffect(() => {
+    const modalWrapper = document.getElementById('modal-window');
+    modalWrapper.style.opacity = 1;
+  });
+
 
   return(
-    <div className="modal-wrapper">
+    <div id="modal-window" style={{opacity: 0}} className="modal-wrapper">
       <div className="modal noselect">
         {/* Window Close Button */}
-        <div onClick={() => props.handleClose()} className="modal-close">
+        <div onClick={() => handleClose()} className="modal-close">
           <FontAwesomeIcon className="modal-close-icon" icon={['fas', 'window-close']} />
         </div>
 
         {/* Renders arrow only if not first project in list */}
-        {props.modalIndex > 1
+        {modalIndex > 1
         ?
-        <div onClick={() => props.handlePrevious()} className="modal-left-arrow">
+        <div onClick={() => handlePrevious()} className="modal-left-arrow">
           <FontAwesomeIcon className="arrow-icon" icon={['fas', "arrow-left"]} />
         </div>
         :
@@ -39,9 +57,9 @@ const Modal = (props) => {
         </div>
 
         {/* Renders arrow only if not last project in list */}
-        {props.modalIndex < projects.length
+        {modalIndex < projects.length
         ?
-        <div onClick={() => props.handleNext()} className="modal-right-arrow">
+        <div onClick={() => handleNext()} className="modal-right-arrow">
           <FontAwesomeIcon className="arrow-icon" icon={['fas', "arrow-right"]} />
         </div>
         :

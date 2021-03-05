@@ -477,6 +477,7 @@
   left: 0;
   right: 0;
   background-color: rgba(34, 38, 41, 0.5);
+  transition: opacity 0.5s ease;
 }
 
 .modal {
