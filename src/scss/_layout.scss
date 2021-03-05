@@ -268,6 +268,9 @@
   text-align: center;
   margin-bottom: 50px;
 }
+.carousel {
+  border-radius: 5px;
+}
 .carousel-root {
   margin: 50px auto;
   max-width: 800px;
@@ -283,6 +286,10 @@
   opacity: 1 !important;
   bottom: 0 !important;
   top: auto !important;
+  border-radius: 5px;
+  &:hover {
+    background-color: darken($Accent-Dark, 10%) !important;
+  }
 }
 .carousel-status {
   transform: translateX(-40px);
@@ -337,10 +344,14 @@
   width: 50px;
   height: 50px;
   background-color: $Primary-Light;
+  transition: background-color .5s ease;
   a {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  &:hover {
+    background-color: $Primary-Extra-Light;
   }
 }
 
@@ -425,6 +436,7 @@
     font-size: 16px;
   }
   .contact-modal-button {
+    font-size: 16px;
     padding: 5px;
     min-width: 0;
     justify-self: flex-end;
@@ -507,20 +519,38 @@
 .modal-left-arrow {
   z-index: 5000;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
   left: 0;
   bottom: 0;
   width: 40px;
   background-color: $Accent-Dark;
+  border-top-right-radius: 5px;
   border-bottom-left-radius: 10px;
+  transition: background-color .5s ease;
+  &:hover {
+    background-color: darken($Accent-Dark, 10%) !important;
+  }
 }
 .modal-right-arrow {
   z-index: 5000;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
   right: 0;
   bottom: 0;
   width: 40px;
   background-color: $Accent-Dark;
+  border-top-left-radius: 5px;
   border-bottom-right-radius: 10px;
+  transition: background-color .5s ease;
+  &:hover {
+    background-color: darken($Accent-Dark, 10%) !important;
+  }
 }
 .arrow-icon {
   color: $Base;

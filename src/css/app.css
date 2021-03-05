@@ -282,6 +282,10 @@
   margin-bottom: 50px;
 }
 
+.carousel {
+  border-radius: 5px;
+}
+
 .carousel-root {
   margin: 50px auto;
   max-width: 800px;
@@ -300,6 +304,10 @@
   opacity: 1 !important;
   bottom: 0 !important;
   top: auto !important;
+  border-radius: 5px;
+}
+.control-arrow:hover {
+  background-color: #466322 !important;
 }
 
 .carousel-status {
@@ -362,11 +370,15 @@
   width: 50px;
   height: 50px;
   background-color: #474b4f;
+  transition: background-color 0.5s ease;
 }
 .footer-icon-wrapper a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.footer-icon-wrapper:hover {
+  background-color: #6b6e70;
 }
 
 /**************************
@@ -456,6 +468,7 @@
   font-size: 16px;
 }
 .message-status .contact-modal-button {
+  font-size: 16px;
   padding: 5px;
   min-width: 0;
   justify-self: flex-end;
@@ -542,21 +555,39 @@
 .modal-left-arrow {
   z-index: 5000;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
   left: 0;
   bottom: 0;
   width: 40px;
   background-color: #61892f;
+  border-top-right-radius: 5px;
   border-bottom-left-radius: 10px;
+  transition: background-color 0.5s ease;
+}
+.modal-left-arrow:hover {
+  background-color: #466322 !important;
 }
 
 .modal-right-arrow {
   z-index: 5000;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
   right: 0;
   bottom: 0;
   width: 40px;
   background-color: #61892f;
+  border-top-left-radius: 5px;
   border-bottom-right-radius: 10px;
+  transition: background-color 0.5s ease;
+}
+.modal-right-arrow:hover {
+  background-color: #466322 !important;
 }
 
 .arrow-icon {
