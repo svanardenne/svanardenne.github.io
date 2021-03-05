@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Import FontAwesome Icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const Header = () => {
   return(
     <header id="home" className="main-header">
@@ -8,7 +11,7 @@ const Header = () => {
           <h1>Hi, I'm <span>Shaun van Ardenne</span></h1>
           <h1>I'm a full-stack Developer</h1>
         </div>
-          <a className="button" href="#details">Check it out!</a>
+          <a className="button" href="#details">Check it out!<FontAwesomeIcon className="banner-icon" icon={['fas', 'arrow-down']} /></a>
       </div>
     </header>
   );
