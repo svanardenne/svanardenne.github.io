@@ -10,6 +10,7 @@ class Contact extends Component {
   state= {
     submitState: 'Submit',
     submitMessage: '',
+    errors: false,
     name: "",
     email: "",
     message: "",
@@ -32,17 +33,22 @@ class Contact extends Component {
       email: this.state.email,
       message: this.state.message
     }
-    this.setState({submitState: 'Sending...'});
-    axios.post(apiURL, data).then((res) => {
-      if (res.data.status === 'success') {
-        this.setState({submitState: 'Submit'});
-        this.setState({submitMessage: 'Message sent.'});
-        this.setState({name: '', email: '', subject: '', message: ''});
-      } else if (res.data.status === 'fail') {
-        this.setState({submitState: 'Submit'});
-        this.setState({submitMessage: 'Message failed to send.'});
-      }
-    });
+    if (data.name && data.email && data.message) {
+      this.setState({errors: false});
+      this.setState({submitState: 'Sending...'});
+      axios.post(apiURL, data).then((res) => {
+        if (res.data.status === 'success') {
+          this.setState({submitState: 'Submit'});
+          this.setState({submitMessage: 'Message sent.'});
+          this.setState({name: '', email: '', subject: '', message: ''});
+        } else if (res.data.status === 'fail') {
+          this.setState({submitState: 'Submit'});
+          this.setState({submitMessage: 'Message failed to send.'});
+        }
+      });
+    } else {
+      this.setState({errors: true});
+    }
   }
 
   render() {
@@ -55,8 +61,17 @@ class Contact extends Component {
             <input onChange={this.handleChange} value={this.state.email} type="email" name="email" placeholder="Enter Email" />
             <textarea onChange={this.handleChange} value={this.state.message} type="text" name="message" placeholder="Your Message" />
             <button type="submit" className="button form-button">{this.state.submitState}</button>
+
+            {this.state.errors === true
+            ?
+            <span className="form-error">Please fill out all fields</span>
+            :
+            null
+            }
+
           </form>
         </div>
+
         {this.state.submitMessage !== ''
         ?
         <div className="modal-wrapper">

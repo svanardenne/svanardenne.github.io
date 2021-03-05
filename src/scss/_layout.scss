@@ -375,6 +375,7 @@
   width: fit-content;
 }
 .contact-form {
+  position: relative;
   max-width: 600px;
   margin: 0 auto;
   padding: 50px 15px;
@@ -442,6 +443,16 @@
     justify-self: flex-end;
     align-self: flex-end;
   }
+}
+.form-error {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  font-size: 16px;
+  color: red;
+  width: 100%;
 }
 
 /**************************
