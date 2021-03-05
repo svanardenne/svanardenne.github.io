@@ -51,7 +51,6 @@ const Home = (props) => {
       {modalState
       ?
       <Modal
-        
         handleClose={handleClose}
         handleNext={handleNext} 
         handlePrevious={handlePrevious} 
