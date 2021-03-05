@@ -1,8 +1,19 @@
 import React from 'react';
 
+// Imports FontAwesome Icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const Footer = () => {
+
+  const scrollUp = () => {
+    window.scrollTo(0, 0);
+  }
+
   return(
     <footer id="footer">
+      <div onClick={() => scrollUp()} className="top-link">
+        <FontAwesomeIcon size="lg" icon={['fas', 'angle-double-up']} />
+      </div>
       <div className="footer-links">
         <a className="footer-icon-wrapper" href="https://github.com/svanardenne" target="_blank">
           <svg className="icon-footer" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

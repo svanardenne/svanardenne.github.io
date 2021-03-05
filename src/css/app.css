@@ -237,6 +237,7 @@
 
 .project-title {
   margin-bottom: 0;
+  color: #222629;
 }
 
 .projects-title {
@@ -343,6 +344,29 @@
 /**************************
 ********* Footer **********
 **************************/
+#footer {
+  position: relative;
+}
+
+.top-link {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  max-width: 50px;
+  margin: 0 auto;
+  color: #e0e0e0;
+  background-color: #C23F1F;
+  padding: 15px;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+}
+.top-link:hover {
+  background-color: #752B19;
+}
+
 .footer-links {
   display: flex;
   flex-direction: row;
@@ -483,7 +507,7 @@
   right: 0;
   bottom: 15px;
   font-size: 16px;
-  color: red;
+  color: #C23F1F;
   width: 100%;
 }
 
