@@ -90,6 +90,16 @@
 .banner-text {
   color: #e0e0e0;
   text-align: center;
+  margin-bottom: 20px;
+}
+.banner-text span {
+  color: #C23F1F;
+}
+.banner-text h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  margin: 0;
 }
 
 .banner-buttons {
