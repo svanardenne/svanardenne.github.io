@@ -98,7 +98,7 @@
 .banner-text h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 28px;
   margin: 0;
 }
 
@@ -125,8 +125,8 @@
   }
 }
 @media (min-width: 1024px) {
-  .banner-text {
-    font-size: 2rem;
+  .banner-text h1 {
+    font-size: 48px;
   }
 }
 /**************************
@@ -796,11 +796,6 @@ h6 {
   border-color: #e0e0e0;
 }
 
-@media (max-width: 500px) {
-  .button {
-    width: 90%;
-  }
-}
 /**************************
 ********** Icons **********
 **************************/
