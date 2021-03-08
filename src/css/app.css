@@ -276,6 +276,7 @@
 }
 
 .project-filter-item {
+  font-family: "Libre Franklin", sans-serif;
   user-select: none;
   cursor: pointer;
 }
