@@ -265,6 +265,28 @@
   width: fit-content;
 }
 
+.project-filter-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 50px;
+}
+
+.project-filter-item {
+  user-select: none;
+  cursor: pointer;
+}
+
+.project-filter-active {
+  color: #e0e0e0;
+  background-color: #C23F1F;
+  border-radius: 10px;
+  padding: 5px;
+}
+
 @media (min-width: 576px) {
   .projects-wrapper {
     flex-direction: row;

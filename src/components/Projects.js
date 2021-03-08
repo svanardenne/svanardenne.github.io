@@ -40,6 +40,14 @@ const Projects = (props) => {
     }
   }
 
+  // Handles the filtering of projects
+  const handleFilter = (e) => {
+    const navList = document.querySelectorAll('.project-filter-item');
+    const target = e.target;
+    navList.forEach(listItem => listItem.classList.remove('project-filter-active'));
+    target.classList.add('project-filter-active');
+  }
+
   return(
     <section id="projects">
       {/* Creates modal window based on state */}
@@ -56,6 +64,12 @@ const Projects = (props) => {
       />
       :
       null}
+        <ul className="project-filter-nav">
+          <li onClick={(e) => handleFilter(e)} className="project-filter-item project-filter-active">All</li>
+          <li onClick={(e) => handleFilter(e)} className="project-filter-item">JavaScript</li>
+          <li onClick={(e) => handleFilter(e)} className="project-filter-item">React</li>
+          <li onClick={(e) => handleFilter(e)} className="project-filter-item">Node/Express</li>
+        </ul>
       <div className="projects-wrapper main-content">
         {projects.map((project, i)=> <ProjectCard key={i} projects={projects} project={project} handleModal={handleModal} />)}
       </div>
