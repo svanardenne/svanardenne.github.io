@@ -599,6 +599,7 @@
 
 .modal-img {
   width: 70%;
+  height: auto;
   margin-top: 23.4px;
 }
 
@@ -677,7 +678,7 @@
 
 @media (min-width: 576px) {
   .modal {
-    height: 800px;
+    max-height: 800px;
     font-size: inherit;
   }
 
