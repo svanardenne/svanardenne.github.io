@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import Modal from './Modal';
 
@@ -9,7 +9,19 @@ const Projects = (props) => {
   const [ modalState, setModalState ] = useState(false);
   const [ modalIndex, setModalIndex ] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pages, setPages] = useState(Math.round(projects.length / 3));
+  const [ maxDisplay, setMaxDisplay ] = useState(2);
+  const [pages, setPages] = useState(Math.ceil(projects.length / maxDisplay));
+
+  useEffect(() => {
+    if (window.innerWidth >= 768) {
+      setMaxDisplay(4);
+      setPages(Math.ceil(projects.length / maxDisplay));
+    }
+    if (window.innerWidth >= 1080) {
+      setMaxDisplay(3);
+      setPages(Math.ceil(projects.length / maxDisplay));
+    }
+  });
 
   // Sets data for the modal window and creates the popup
   const handleModal = (data) => {
@@ -51,12 +63,12 @@ const Projects = (props) => {
     const value = e.target.textContent;
     if (value === 'All') {
       setProjects(props.context.projectData);
-      setPages(Math.ceil(props.context.projectData.length / 3));
+      setPages(Math.ceil(props.context.projectData.length / maxDisplay));
       setCurrentPage(1);
     } else {
       const newArr = props.context.projectData.filter(project => project.projectTech.includes(value));
       setProjects(newArr);
-      setPages(Math.ceil(newArr.length / 3));
+      setPages(Math.ceil(newArr.length / maxDisplay));
       setCurrentPage(1);
     }
   }
@@ -89,8 +101,8 @@ const Projects = (props) => {
 
   // Returns an updated project array based on current page
   const getPaginatedData = (data) => {
-    const startIndex = currentPage * 3 - 3;
-    const endIndex = startIndex + 3;
+    const startIndex = currentPage * maxDisplay - maxDisplay;
+    const endIndex = startIndex + maxDisplay;
     return data.slice(startIndex, endIndex);
   };
 
