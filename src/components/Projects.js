@@ -14,6 +14,10 @@ const Projects = (props) => {
 
   // Sets maxDisplay results based on window size
   useEffect(() => {
+    if (window.innerWidth < 768) {
+      setMaxDisplay(2);
+      setPages(Math.ceil(projects.length / maxDisplay));
+    }
     if (window.innerWidth >= 768) {
       setMaxDisplay(4);
       setPages(Math.ceil(projects.length / maxDisplay));
@@ -22,6 +26,23 @@ const Projects = (props) => {
       setMaxDisplay(3);
       setPages(Math.ceil(projects.length / maxDisplay));
     }
+    window.addEventListener('resize', () => {
+      if (window.innerWidth < 768) {
+        setMaxDisplay(2);
+        setPages(Math.ceil(projects.length / maxDisplay));
+        setCurrentPage(1);
+      }
+      if (window.innerWidth >= 768) {
+        setMaxDisplay(4);
+        setPages(Math.ceil(projects.length / maxDisplay));
+        setCurrentPage(1);
+      }
+      if (window.innerWidth >= 1080) {
+        setMaxDisplay(3);
+        setPages(Math.ceil(projects.length / maxDisplay));
+        setCurrentPage(1);
+      }
+    });
   });
 
   // Sets data for the modal window and creates the popup
