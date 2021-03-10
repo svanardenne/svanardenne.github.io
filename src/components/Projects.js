@@ -67,8 +67,11 @@ const Projects = (props) => {
       setPages(Math.ceil(props.context.projectData.length / maxDisplay));
       setCurrentPage(1);
     } else {
-      const newArr = props.context.projectData.filter(project => project.projectTech.includes(value));
+      let newArr = props.context.projectData.filter(project => project.projectTech.includes(value));
       setProjects(newArr);
+      for (let i = 0; i < newArr.length; i++) {
+        newArr[i].id = i + 1;
+      }
       setPages(Math.ceil(newArr.length / maxDisplay));
       setCurrentPage(1);
     }
