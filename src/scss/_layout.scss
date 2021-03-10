@@ -297,6 +297,33 @@
   border-radius: 10px;
   padding: 5px;
 }
+.pagination {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.pagination-item,
+.next,
+.prev {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+.prev,
+.next {
+  color: $Base;
+  background-color: $Accent-Dark;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color .5s ease;
+  &:hover {
+    background-color: darken($Accent-Dark, 10%);
+  }
+}
+.page-active {
+  color: $Highlight;
+}
 @media(min-width: 576px) {
   .projects-wrapper {
     flex-direction: row;

@@ -8,6 +8,8 @@ const Projects = (props) => {
   const [projects, setProjects] = useState(props.context.projectData);
   const [ modalState, setModalState ] = useState(false);
   const [ modalIndex, setModalIndex ] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pages, setPages] = useState(Math.round(projects.length / 6));
 
   // Sets data for the modal window and creates the popup
   const handleModal = (data) => {
@@ -49,14 +51,50 @@ const Projects = (props) => {
     const value = e.target.textContent;
     if (value === 'All') {
       setProjects(props.context.projectData);
+      setPages(Math.ceil(props.context.projectData.length / 6));
     } else {
       const newArr = props.context.projectData.filter(project => project.projectTech.includes(value));
       setProjects(newArr);
+      setPages(Math.ceil(newArr.length / 6));
     }
   }
 
+  // Handles Pagination next page
+  function goToNextPage() {
+    if (currentPage < pages) {
+      setCurrentPage((page) => page + 1);
+    }
+  }
+
+  // Handles Pagination previous page
+  function goToPreviousPage() {
+    if (currentPage > 1) {
+      setCurrentPage((page) => page - 1);
+    }
+  }
+
+  // Handles page change
+  function changePage(event) {
+    const pageNumber = Number(event.target.textContent);
+    setCurrentPage(pageNumber);
+  }
+
+  // Sets up the pagination array to display buttons in JSX
+  const getPaginationGroup = () => {
+    let start = Math.floor((currentPage - 1) / pages) * pages;
+    return new Array(pages).fill().map((_, idx) => start + idx + 1);
+  };
+
+  // Returns an updated project array based on current page
+  const getPaginatedData = (data) => {
+    const startIndex = currentPage * 6 - 6;
+    const endIndex = startIndex + 6;
+    return data.slice(startIndex, endIndex);
+  };
+
   return(
     <section id="projects" className="main-content">
+
       {/* Creates modal window based on state */}
       <h2 className="projects-title">Projects</h2>
       {modalState
@@ -71,15 +109,51 @@ const Projects = (props) => {
       />
       :
       null}
-        <ul className="project-filter-nav">
-          <li onClick={(e) => handleFilter(e)} className="project-filter-item project-filter-active">All</li>
-          <li onClick={(e) => handleFilter(e)} className="project-filter-item">JavaScript</li>
-          <li onClick={(e) => handleFilter(e)} className="project-filter-item">React</li>
-          <li onClick={(e) => handleFilter(e)} className="project-filter-item">Node</li>
-        </ul>
+
+      {/* Filter for projects */}
+      <ul className="project-filter-nav">
+        <li onClick={(e) => handleFilter(e)} className="project-filter-item project-filter-active">All</li>
+        <li onClick={(e) => handleFilter(e)} className="project-filter-item">JavaScript</li>
+        <li onClick={(e) => handleFilter(e)} className="project-filter-item">React</li>
+        <li onClick={(e) => handleFilter(e)} className="project-filter-item">Node</li>
+      </ul>
+
+      {/* Display Projects */}
       <div className="projects-wrapper main-content">
-        {projects.map((project, i)=> <ProjectCard key={i} projects={projects} project={project} handleModal={handleModal} />)}
+        {getPaginatedData(projects).map((project, i)=> <ProjectCard key={i} projects={projects} project={project} handleModal={handleModal} />)}
       </div>
+
+      {/* Display Pagination */}
+      <div className="pagination">
+
+        {/* previous button */}
+        <button
+          onClick={goToPreviousPage}
+          className={`prev ${currentPage === 1 ? 'disabled' : ''}`}
+        >
+          prev
+        </button>
+
+        {/* show page numbers */}
+        {getPaginationGroup().map((item, i) => (
+          <button
+            key={i}
+            onClick={changePage}
+            className={`pagination-item ${currentPage === item ? 'page-active' : null}`}
+          >
+            <span>{item}</span>
+          </button>
+        ))}
+
+        {/* next button */}
+        <button
+          onClick={goToNextPage}
+          className={`next ${currentPage === pages ? 'disabled' : ''}`}
+        >
+          next
+        </button>
+      </div>
+
     </section>
 
   );
