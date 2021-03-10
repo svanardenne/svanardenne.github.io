@@ -238,6 +238,10 @@
   max-width: 1200px;
 }
 
+.projects {
+  position: relative;
+}
+
 .card-wrapper {
   text-align: center;
   margin-bottom: 50px;
@@ -316,8 +320,11 @@
 }
 
 .pagination {
+  position: absolute;
   text-align: center;
-  margin-bottom: 50px;
+  bottom: 45px;
+  left: 0;
+  right: 0;
 }
 
 .pagination-item,
@@ -357,7 +364,7 @@
 }
 @media (min-width: 768px) {
   .projects-wrapper {
-    margin: 0 auto;
+    margin: 0 auto 50px;
   }
 
   .card-wrapper {

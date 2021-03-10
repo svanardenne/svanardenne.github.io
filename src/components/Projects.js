@@ -9,7 +9,7 @@ const Projects = (props) => {
   const [ modalState, setModalState ] = useState(false);
   const [ modalIndex, setModalIndex ] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pages, setPages] = useState(Math.round(projects.length / 6));
+  const [pages, setPages] = useState(Math.round(projects.length / 3));
 
   // Sets data for the modal window and creates the popup
   const handleModal = (data) => {
@@ -51,11 +51,13 @@ const Projects = (props) => {
     const value = e.target.textContent;
     if (value === 'All') {
       setProjects(props.context.projectData);
-      setPages(Math.ceil(props.context.projectData.length / 6));
+      setPages(Math.ceil(props.context.projectData.length / 3));
+      setCurrentPage(1);
     } else {
       const newArr = props.context.projectData.filter(project => project.projectTech.includes(value));
       setProjects(newArr);
-      setPages(Math.ceil(newArr.length / 6));
+      setPages(Math.ceil(newArr.length / 3));
+      setCurrentPage(1);
     }
   }
 
@@ -87,13 +89,13 @@ const Projects = (props) => {
 
   // Returns an updated project array based on current page
   const getPaginatedData = (data) => {
-    const startIndex = currentPage * 6 - 6;
-    const endIndex = startIndex + 6;
+    const startIndex = currentPage * 3 - 3;
+    const endIndex = startIndex + 3;
     return data.slice(startIndex, endIndex);
   };
 
   return(
-    <section id="projects" className="main-content">
+    <section id="projects" className="main-content projects">
 
       {/* Creates modal window based on state */}
       <h2 className="projects-title">Projects</h2>
