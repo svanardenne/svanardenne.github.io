@@ -12,6 +12,7 @@ const Projects = (props) => {
   const [ maxDisplay, setMaxDisplay ] = useState(2);
   const [pages, setPages] = useState(Math.ceil(projects.length / maxDisplay));
 
+  // Sets maxDisplay results based on window size
   useEffect(() => {
     if (window.innerWidth >= 768) {
       setMaxDisplay(4);
