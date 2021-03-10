@@ -22,6 +22,32 @@ const About = (props) => {
           culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
+      <div className="skills">
+        <div className="skill">
+          <div className="skill-name">CSS</div>
+          <div className="percent" style={{width: '90%'}}></div>
+        </div>
+        <div className="skill">
+        <div className="skill-name">HTML</div>
+          <div className="percent" style={{width: '90%'}}></div>
+        </div>
+        <div className="skill">
+        <div className="skill-name">React.js</div>
+          <div className="percent" style={{width: '80%'}}></div>
+        </div>
+        <div className="skill">
+          <div className="skill-name">JavaScript</div>
+          <div className="percent" style={{width: '80%'}}></div>
+        </div>
+        <div className="skill">
+          <div className="skill-name">Node.js</div>
+          <div className="percent" style={{width: '70%'}}></div>
+        </div>
+        <div className="skill">
+          <div className="skill-name">UX/UI</div>
+          <div className="percent" style={{width: '40%'}}></div>
+        </div>
+      </div>
     </section>
   );
 }

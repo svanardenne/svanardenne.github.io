@@ -147,20 +147,20 @@
 }
 
 .detail {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   text-align: center;
-  flex-basis: 45%;
+  flex-basis: 40%;
   max-width: 200px;
-  height: 250px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .detail h3 {
+  color: #222629;
   font-size: 18px;
   margin-bottom: 0;
 }
 .detail p {
-  font-size: 14px;
+  color: #474b4f;
+  font-size: 16px;
   min-height: 72px;
 }
 
@@ -199,6 +199,33 @@
 .bio-wrapper img {
   padding-bottom: 25px;
   border-bottom: 1px solid #6b6e70;
+}
+
+.skills {
+  margin-bottom: 50px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+  color: #e0e0e0;
+  background-color: #61892f;
+}
+
+.percent {
+  content: "";
+  display: inline-block;
+  height: 30px;
+  background-color: #C23F1F;
 }
 
 /**************************
