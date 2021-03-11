@@ -193,7 +193,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 50px;
-  margin: 150px 15px 50px;
+  margin: 100px 15px 50px;
   max-width: 1200px;
 }
 
@@ -269,6 +269,11 @@
   .bio-wrapper,
 .skills {
     height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .about {
+    margin-top: 150px;
   }
 }
 @media (min-width: 1080px) {
