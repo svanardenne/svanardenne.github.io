@@ -180,43 +180,92 @@
 /**************************
 ********* About ***********
 **************************/
-
+.about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 50px;
+  margin: 150px 15px 50px;
+  max-width: 1200px;
+}
 .bio-wrapper {
-  margin: 103px auto 50px;
-  width: 90%;
   max-width: 500px;
-  padding: 10px;
-  border-radius: 10px;
-  background: #e0e0e0;
-  box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
+  text-align: center;
   img {
+    height: 200px;
+    width: auto;
+    margin: 0 auto;
     padding-bottom: 25px;
     border-bottom: 1px solid $Primary-Extra-Light;
   }
+  h2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    color: $Primary;
+    padding-bottom: 10px;
+    border-bottom: 5px solid $Primary;
+    width: fit-content;
+  }
+  p {
+    font-size: 16px;
+    color: $Primary-Light;
+    margin-bottom: 0;
+  }
 }
 .skills {
-  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 500px;
+  width: 100%;
+  gap: 15px;
 }
 .skill {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 15px;
+  .skill-title {
+    flex-basis: 100px;
+    max-width: 100px;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    color: $Base;
+    background-color: $Accent-Dark;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .skill-percent {
+    position: relative;
+    flex-grow: 1;
+    background-color: $Primary-Extra-Light;
+    .skill-percent-fill {
+      width: 90%;
+      height: 100%;
+      background-color: $Highlight;
+    }
+  }
+  span {
+    color: $Base;
+    background-color: $Primary-Light;
+    font-size: 16px;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }
-.skill-name {
-  display: inline-block;
-  width: 120px;
-  text-align: center;
-  font-size: 1rem;
-  padding: 5px;
-  color: $Base;
-  background-color: $Accent-Dark;
+@media(min-width: 768px) {
+  .bio-wrapper,
+  .skills {
+    height: 400px;
+  }
 }
-.percent {
-  content: '';
-  display: inline-block;
-  height: 30px;
-  background-color: $Highlight;
+@media(min-width: 1080px) {
+  .about {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /**************************
