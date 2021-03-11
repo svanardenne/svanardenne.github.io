@@ -138,7 +138,6 @@ const Projects = (props) => {
 
   return(
     <section id="projects" className="main-content projects fades">
-
       {/* Creates modal window based on state */}
       <h2 className="projects-title">Projects</h2>
       {modalState
@@ -197,7 +196,6 @@ const Projects = (props) => {
           next
         </button>
       </div>
-
     </section>
 
   );

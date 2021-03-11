@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
 
+  // Scroll to top function for the footer scroll button
   const scrollUp = () => {
     window.scrollTo(0, 0);
   }
