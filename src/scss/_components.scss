@@ -94,15 +94,16 @@ h6 {
 }
 /*CSS used to create fading animations on scroll*/
 .fades {
-
   -webkit-transition-delay: .3s;
   -o-transition-delay: 1s;
   transition-delay: 1s;
   -webkit-transition: 1s;
   -o-transition: 1s;
-  transition: 1.5s;
+  transition: 1s;
+  transform: translateY(-20px);
   opacity: 0;
 }
 .inView {
   opacity: 1;
+  transform: translateY(0);
 }

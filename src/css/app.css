@@ -943,12 +943,14 @@ h6 {
   transition-delay: 1s;
   -webkit-transition: 1s;
   -o-transition: 1s;
-  transition: 1.5s;
+  transition: 1s;
+  transform: translateY(-20px);
   opacity: 0;
 }
 
 .inView {
   opacity: 1;
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=app.css.map */
