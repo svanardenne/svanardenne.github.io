@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Header = () => {
   return(
-    <header id="home" className="main-header">
+    <header id="home" className="main-header fades">
       <div className="banner">
         <div className="banner-text">
           <h1>Hi, I'm <span>Shaun van Ardenne</span></h1>

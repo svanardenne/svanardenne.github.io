@@ -6,6 +6,11 @@ import apiURL from '../mailAPIconfig';
 
 class Contact extends Component {
 
+  // Calls fade fucntion from context
+  componentDidMount() {
+    this.props.context.fade();
+  }
+
   // Sets state for controlled inputs
   state= {
     submitState: 'Submit',
@@ -53,7 +58,7 @@ class Contact extends Component {
 
   render() {
     return(
-      <section id="contact" className="main-content contact-wrapper">
+      <section id="contact" className="main-content contact-wrapper fades">
         <h2 className="contact-title">Contact</h2>
         <div className="form-wrapper">
           <form onSubmit={this.handleSubmit} className="contact-form">

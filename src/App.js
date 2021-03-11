@@ -26,7 +26,10 @@ library.add(fab, fas);
 
 // Components with context
 const HomeWithContext = withContext(Home);
+const aboutWithContext = withContext(About);
 const ProjectsWithContext = withContext(Projects);
+const contactWithContext = withContext(Contact);
+
 
 // Main app
 function App() {
@@ -38,15 +41,14 @@ function App() {
           <Switch>
             <Redirect exact path="/" to="/home" />
             <Route path="/home" component={HomeWithContext} />
-            <Route path="/about" component={About} />
+            <Route path="/about" component={aboutWithContext} />
             <Route path="/projects" component={ProjectsWithContext} />
-            <Route path="/contact" component={Contact} />
+            <Route path="/contact" component={contactWithContext} />
           </Switch>
           <Footer />
         </div>
       </ScrollToTop>
     </BrowserRouter>
-
   );
 }
 

@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProfileImg from '../img/profile/Profile-pic-1.jpg';
 
 const About = (props) => {
+
+  // Calls fade function from context
+  useEffect(() => {
+    props.context.fade();
+  });
+
   return(
-    <section id="about" className="main-content" style={{position: 'relative'}}>
+    <section id="about" className="main-content fades" style={{position: 'relative'}}>
       <div className="about">
         <div className="bio-wrapper">
           <img src={ProfileImg} alt="Picture of Shaun on white background" />

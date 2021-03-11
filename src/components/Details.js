@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Details = () => {
   return(
-    <section id="details">
+    <section id="details" className="fades">
       <div className="details-wrapper">
         <div className="detail">
           <div className="icon">

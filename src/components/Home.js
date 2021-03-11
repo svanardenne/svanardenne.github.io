@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Component Imports
 import Header from './Header';
@@ -8,6 +8,11 @@ import Modal from './Modal';
 
 
 const Home = (props) => {
+
+  // Calls fade function from context
+  useEffect(() => {
+    props.context.fade();
+  });
 
   // Sets state for this component
   const [projects, setProjects] = useState(props.context.projectData.slice(0, 3));

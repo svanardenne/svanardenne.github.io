@@ -10,7 +10,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const SlideShow = (props) => {
   return(
-    <section id="carousel">
+    <section id="carousel" className="fades">
       <h2 className="carousel-title">Projects</h2>
       <Carousel showThumbs={false} className="carousel">
         {props.projects.map((project, i) => <CarouselCard handleModal={props.handleModal} className="carousel-slide" key={i} projects={props.projects} project={project} />)}

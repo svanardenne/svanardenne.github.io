@@ -45,6 +45,11 @@ const Projects = (props) => {
     });
   });
 
+  // Calls fade function from context
+  useEffect(() => {
+    props.context.fade();
+  });
+
   // Sets data for the modal window and creates the popup
   const handleModal = (data) => {
     setModalIndex(data);
@@ -132,7 +137,7 @@ const Projects = (props) => {
   };
 
   return(
-    <section id="projects" className="main-content projects">
+    <section id="projects" className="main-content projects fades">
 
       {/* Creates modal window based on state */}
       <h2 className="projects-title">Projects</h2>
