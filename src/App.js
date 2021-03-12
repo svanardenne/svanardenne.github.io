@@ -34,7 +34,7 @@ const contactWithContext = withContext(Contact);
 // Main app
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename='svanardenne.github.io/'>
       <ScrollToTop>
         <div className="App">
           <Navbar />
