@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import ProfileImg from '../img/profile/Profile-pic-1.jpg';
 
 const About = (props) => {
@@ -15,10 +16,12 @@ const About = (props) => {
           <img src={ProfileImg} alt="Picture of Shaun on white background" />
           <div>
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, 
-            consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt 
-            ut labore et dolore magna aliqua.</p>
+            <p>I'm a Full Stack Developer residing in Abbotsford, British Columbia.  
+            I strive to make clean, responsive, and intuitive websites and user interfaces  
+            while maitaining code which is easy to dive into!  
+            <Link to="/projects" className="bio-link">  Check out my work
+            </Link> or <Link to="/contact" className="bio-link">drop me a line </Link>
+            if you want to connect!</p>
           </div>
         </div>
         <div className="skills">

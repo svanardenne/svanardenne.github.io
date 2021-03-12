@@ -223,6 +223,14 @@
   margin-bottom: 0;
 }
 
+.bio-link {
+  text-decoration: none;
+  color: #61892f;
+}
+.bio-link:visited {
+  color: #C23F1F;
+}
+
 .skills {
   display: flex;
   flex-direction: column;
