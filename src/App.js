@@ -34,7 +34,7 @@ const contactWithContext = withContext(Contact);
 // Main app
 function App() {
   return (
-    <BrowserRouter basename='svanardenne.github.io/'>
+    <BrowserRouter basename='https://eldritchwebdesign.ca/'>
       <ScrollToTop>
         <div className="App">
           <Navbar />
