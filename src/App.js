@@ -39,11 +39,11 @@ function App() {
         <div className="App">
           <Navbar />
           <Switch>
-            <Redirect exact path="/" to="/home" />
-            <Route path="/home" component={HomeWithContext} />
-            <Route path="/about" component={aboutWithContext} />
-            <Route path="/projects" component={ProjectsWithContext} />
-            <Route path="/contact" component={contactWithContext} />
+            <Redirect exact path={process.env.PUBLIC_URL + '/'} to={process.env.PUBLIC_URL + '/home'} />
+            <Route path={process.env.PUBLIC_URL + '/home'} component={HomeWithContext} />
+            <Route path={process.env.PUBLIC_URL + '/about'} component={aboutWithContext} />
+            <Route path={process.env.PUBLIC_URL + '/projects'} component={ProjectsWithContext} />
+            <Route path={process.env.PUBLIC_URL + '/contact'} component={contactWithContext} />
           </Switch>
           <Footer />
         </div>
