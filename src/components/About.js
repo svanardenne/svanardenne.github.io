@@ -61,6 +61,20 @@ const About = (props) => {
             <span>70%</span>
           </div>
           <div className="skill">
+            <div className="skill-title">Express</div>
+            <div className="skill-percent">
+              <div className="skill-percent-fill" style={{width: '70%'}}></div>
+            </div>
+            <span>70%</span>
+          </div>
+          <div className="skill">
+            <div className="skill-title">SQL</div>
+            <div className="skill-percent">
+              <div className="skill-percent-fill" style={{width: '60%'}}></div>
+            </div>
+            <span>60%</span>
+          </div>
+          <div className="skill">
             <div className="skill-title">UX/UI</div>
             <div className="skill-percent">
               <div className="skill-percent-fill" style={{width: '40%'}}></div>

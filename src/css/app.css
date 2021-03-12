@@ -250,7 +250,7 @@
   font-size: 16px;
   padding: 5px;
   color: #e0e0e0;
-  background-color: #61892f;
+  background-color: #C23F1F;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -262,7 +262,7 @@
 .skill .skill-percent .skill-percent-fill {
   width: 90%;
   height: 100%;
-  background-color: #C23F1F;
+  background-color: #61892f;
 }
 .skill span {
   color: #e0e0e0;

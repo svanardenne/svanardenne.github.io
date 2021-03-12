@@ -238,7 +238,7 @@
     font-size: 16px;
     padding: 5px;
     color: $Base;
-    background-color: $Accent-Dark;
+    background-color: $Highlight;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
@@ -250,7 +250,7 @@
     .skill-percent-fill {
       width: 90%;
       height: 100%;
-      background-color: $Highlight;
+      background-color: $Accent-Dark;
     }
   }
   span {
