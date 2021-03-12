@@ -1,6 +1,6 @@
 // Dependancy imports
 import React from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 // CSS Styling
 import './css/app.css';
@@ -34,7 +34,7 @@ const contactWithContext = withContext(Contact);
 // Main app
 function App() {
   return (
-    <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
+    <HashRouter>
       <ScrollToTop>
         <div className="App">
           <Navbar />
@@ -48,7 +48,7 @@ function App() {
           <Footer />
         </div>
       </ScrollToTop>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
