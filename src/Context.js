@@ -17,7 +17,6 @@ export class Provider extends Component {
     //Create fade effect on sections on scroll
     const fade = () => {
       let elementsArray = document.querySelectorAll(".fades");
-      console.log(elementsArray);
       window.addEventListener('scroll', fadeIn ); 
       function fadeIn() {
           for (var i = 0; i < elementsArray.length; i++) {
