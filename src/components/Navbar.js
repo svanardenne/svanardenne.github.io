@@ -10,8 +10,11 @@ const Navbar = (props) => {
 
   // Logic for toggling the nav links on click
   const navToggle = () => {
-    const linkWrapper = document.querySelector('.link-wrapper');
-    linkWrapper.classList.toggle('visible');
+    if (window.innerWidth < 576) {
+      const linkWrapper = document.querySelector('.link-wrapper');
+      linkWrapper.classList.toggle('visible');
+    }
+
   }
 
   return(
