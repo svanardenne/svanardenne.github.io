@@ -17,10 +17,10 @@ const Navbar = (props) => {
   return(
     <nav>
       <div className="link-wrapper">
-        <NavLink className="nav-link" to="/home">Home</NavLink>
-        <NavLink className="nav-link" to="/about">About</NavLink>
-        <NavLink className="nav-link" to="/projects">Projects</NavLink>
-        <NavLink className="nav-link" to="/contact">Contact</NavLink>
+        <NavLink onClick={navToggle} className="nav-link" to="/home">Home</NavLink>
+        <NavLink onClick={navToggle} className="nav-link" to="/about">About</NavLink>
+        <NavLink onClick={navToggle} className="nav-link" to="/projects">Projects</NavLink>
+        <NavLink onClick={navToggle} className="nav-link" to="/contact">Contact</NavLink>
       </div>
       <FontAwesomeIcon icon={["fas", "bars"]} className="nav-toggle" onClick={navToggle} />
     </nav>
