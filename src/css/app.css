@@ -849,6 +849,8 @@
 **************************/
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  /* for removing the highlight */
 }
 
 html {
