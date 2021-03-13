@@ -26,23 +26,6 @@ const Projects = (props) => {
       setMaxDisplay(3);
       setPages(Math.ceil(projects.length / maxDisplay));
     }
-    window.addEventListener('resize', () => {
-      if (window.innerWidth < 768) {
-        setMaxDisplay(2);
-        setPages(Math.ceil(projects.length / maxDisplay));
-        setCurrentPage(1);
-      }
-      if (window.innerWidth >= 768) {
-        setMaxDisplay(4);
-        setPages(Math.ceil(projects.length / maxDisplay));
-        setCurrentPage(1);
-      }
-      if (window.innerWidth >= 1080) {
-        setMaxDisplay(3);
-        setPages(Math.ceil(projects.length / maxDisplay));
-        setCurrentPage(1);
-      }
-    });
   });
 
   // Calls fade function from context
