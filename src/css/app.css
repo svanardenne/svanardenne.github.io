@@ -736,15 +736,16 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  text-align: left;
+  text-align: center;
   list-style-position: inside;
-  max-width: 350px;
+  max-width: 500px;
   margin: 0 auto;
   max-height: 100px;
   margin-bottom: 13.4px;
+  padding-left: 0;
 }
 .modal-tech li {
-  flex-basis: 50%;
+  flex-basis: 33%;
   color: #474b4f;
   margin-bottom: 10px;
 }
