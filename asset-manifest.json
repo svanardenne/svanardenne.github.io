@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e8c65d34.chunk.css",
+    "main.js": "/static/js/main.227f947e.chunk.js",
+    "main.js.map": "/static/js/main.227f947e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a29335d3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a29335d3.js.map",
+    "static/css/2.631cbb15.chunk.css": "/static/css/2.631cbb15.chunk.css",
+    "static/js/2.77236a7d.chunk.js": "/static/js/2.77236a7d.chunk.js",
+    "static/js/2.77236a7d.chunk.js.map": "/static/js/2.77236a7d.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.631cbb15.chunk.css.map": "/static/css/2.631cbb15.chunk.css.map",
+    "static/css/main.e8c65d34.chunk.css.map": "/static/css/main.e8c65d34.chunk.css.map",
+    "static/js/2.77236a7d.chunk.js.LICENSE.txt": "/static/js/2.77236a7d.chunk.js.LICENSE.txt",
+    "static/media/Profile-pic-1.56af2aec.jpg": "/static/media/Profile-pic-1.56af2aec.jpg",
+    "static/media/elder-gods-landing.png": "/static/media/elder-gods-landing.3acec472.png",
+    "static/media/employee-directory.png": "/static/media/employee-directory.86520974.png",
+    "static/media/fs-project-1.png": "/static/media/fs-project-1.efec1659.png",
+    "static/media/fs-project-2.png": "/static/media/fs-project-2.c4263a17.png",
+    "static/media/fs-project-4.png": "/static/media/fs-project-4.5beb78af.png",
+    "static/media/full-stack-course-app.png": "/static/media/full-stack-course-app.f8cb2883.png",
+    "static/media/fullstack-project-3.png": "/static/media/fullstack-project-3.b9331ce4.png",
+    "static/media/library-crud-application.png": "/static/media/library-crud-application.41b3f69b.png",
+    "static/media/project-1.png": "/static/media/project-1.71151b6f.png",
+    "static/media/project-2.png": "/static/media/project-2.5384f96e.png",
+    "static/media/project-3.png": "/static/media/project-3.f94e002b.png",
+    "static/media/project-4.png": "/static/media/project-4.e6c78e29.png",
+    "static/media/project-5.png": "/static/media/project-5.1b11304a.png",
+    "static/media/project-6.png": "/static/media/project-6.821472fa.png",
+    "static/media/project-7.png": "/static/media/project-7.dc8c55d8.png",
+    "static/media/project-8.png": "/static/media/project-8.29fcabaf.png",
+    "static/media/app.css": "/static/media/van-at-night.add1dda5.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a29335d3.js",
+    "static/css/2.631cbb15.chunk.css",
+    "static/js/2.77236a7d.chunk.js",
+    "static/css/main.e8c65d34.chunk.css",
+    "static/js/main.227f947e.chunk.js"
+  ]
+}
