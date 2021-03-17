@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.b4bb6d58.chunk.css",
+    "main.css": "/static/css/main.b13b27e2.chunk.css",
     "main.js": "/static/js/main.ec75287e.chunk.js",
     "main.js.map": "/static/js/main.ec75287e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a29335d3.js",
@@ -10,7 +10,7 @@
     "static/js/2.77236a7d.chunk.js.map": "/static/js/2.77236a7d.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.631cbb15.chunk.css.map": "/static/css/2.631cbb15.chunk.css.map",
-    "static/css/main.b4bb6d58.chunk.css.map": "/static/css/main.b4bb6d58.chunk.css.map",
+    "static/css/main.b13b27e2.chunk.css.map": "/static/css/main.b13b27e2.chunk.css.map",
     "static/js/2.77236a7d.chunk.js.LICENSE.txt": "/static/js/2.77236a7d.chunk.js.LICENSE.txt",
     "static/media/Profile-pic-1.56af2aec.jpg": "/static/media/Profile-pic-1.56af2aec.jpg",
     "static/media/elder-gods-landing.png": "/static/media/elder-gods-landing.3acec472.png",
@@ -35,7 +35,7 @@
     "static/js/runtime-main.a29335d3.js",
     "static/css/2.631cbb15.chunk.css",
     "static/js/2.77236a7d.chunk.js",
-    "static/css/main.b4bb6d58.chunk.css",
+    "static/css/main.b13b27e2.chunk.css",
     "static/js/main.ec75287e.chunk.js"
   ]
 }
